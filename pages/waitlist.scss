@@ -1,0 +1,39 @@
+.waitlist_page {
+  &__container {
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+    height: 99vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  &__mag_glass {
+    font-size: 50px;
+  }
+
+  &__title {
+    font-size: 40px;
+    text-align: center;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    &__form {
+      display: grid;
+      grid-template-columns: 65% 30%;
+      align-items: end;
+      gap: 16px;
+      width: 468px;
+    }
+  }
+}
+
+.input_container {
+  width: 270px;
+}

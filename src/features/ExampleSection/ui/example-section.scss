@@ -1,0 +1,45 @@
+.example-section {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    margin-bottom: 140px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 446px;
+  }
+
+  &__buttons {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  @media (min-width: 762px) {
+    &__container {
+      gap: 32px;
+      margin-bottom: 150px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__container {
+      gap: 24px;
+      margin-bottom: 170px;
+    }
+
+    &__text {
+      max-width: 747px;
+    }
+
+    &__buttons {
+      max-width: 240px;
+    }
+  }
+}

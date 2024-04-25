@@ -1,0 +1,12 @@
+.db-slides {
+  &__container {
+    display: flex;
+  }
+
+  &__container_mongodb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 1.2;
+  }
+}

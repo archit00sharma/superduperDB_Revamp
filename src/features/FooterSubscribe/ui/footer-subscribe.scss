@@ -1,0 +1,38 @@
+.footer-subscribe {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 40px;
+    }
+
+    &__text {
+      gap: 16px;
+    }
+
+    &__form {
+      gap: 24px;
+      display: grid;
+      grid-template-columns: 65% 30%;
+      align-items: end;
+    }
+  }
+}

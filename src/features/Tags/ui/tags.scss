@@ -1,0 +1,11 @@
+.tags {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    &_centered {
+      justify-content: center;
+    }
+  }
+}

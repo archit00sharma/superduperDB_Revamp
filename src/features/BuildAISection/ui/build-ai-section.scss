@@ -1,0 +1,52 @@
+.build-ai {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 24px;
+  align-items: flex-start;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 140px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__code {
+    width: 100%;
+    min-width: 50%;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+
+    &__container {
+      gap: 32px;
+      margin-bottom: 150px;
+    }
+
+    &__text {
+      max-width: 50%;
+    }
+
+    &__code {
+      width: fit-content;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__container {
+      gap: 44px;
+      margin-bottom: 170px;
+    }
+  }
+}

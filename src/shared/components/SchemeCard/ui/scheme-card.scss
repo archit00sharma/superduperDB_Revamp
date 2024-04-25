@@ -1,0 +1,50 @@
+.scheme-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+
+  &_primary {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: var(--primary-colors-purple);
+    backdrop-filter: blur(5.240165710449219px);
+  }
+
+  &_secondary {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: var(--secondary-colors-dark-purple);
+    backdrop-filter: blur(5.240165710449219px);
+  }
+
+  &__title {
+    color: var(--primary-colors-white, #fff);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    color: var(--secondary-colors-grey, #aab0bc);
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 16px;
+    padding: 24px;
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}

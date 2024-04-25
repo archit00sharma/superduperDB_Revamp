@@ -1,0 +1,67 @@
+.why-section {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 140px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__paragraph-with-emoji {
+    display: flex;
+    align-items: center; /* Center vertically */
+  }
+  &__keywords {
+    color: var(--primary-colors-white);
+    font-weight: bold;
+  }
+
+  &__emoji {
+    font-size: 28px; /* Adjust the size as needed */
+    margin-right: 10px; /* Add some spacing between the emoji and text */
+    align-self: flex-start; /* Align the emoji to the start (top) of its container */
+    margin-top: 0px;
+  }
+
+  @media (min-width: 762px) {
+    &__container {
+      margin-bottom: 150px;
+    }
+
+    &__text {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 40px;
+      align-items: start;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__container {
+      flex-direction: row;
+      gap: 100px;
+      margin-bottom: 170px;
+    }
+
+    &__title {
+      width: 100%;
+    }
+
+    &__text {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      gap: 50px;
+      justify-items: start;
+      width: 100%;
+
+      > p {
+        max-width: 420px;
+      }
+    }
+  }
+}

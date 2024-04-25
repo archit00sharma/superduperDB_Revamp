@@ -1,0 +1,19 @@
+.text-button {
+  display: flex;
+  gap: 16px;
+  border: none;
+  background: none;
+  color: var(--secondary-colors-grey);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  width: max-content;
+  height: auto;
+  padding: 0;
+
+  &:hover {
+    color: var(--primary-colors-white);
+    cursor: pointer;
+  }
+}

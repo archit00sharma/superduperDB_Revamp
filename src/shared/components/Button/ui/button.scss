@@ -1,0 +1,87 @@
+// button {
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 16px;
+//   padding: 0 16px;
+//   font-size: 16px;
+//   line-height: 150%;
+//   font-weight: 500;
+//   background: none;
+//   border: none;
+//   height: 56px;
+//   width: 100%;
+//   max-width: 500px;
+
+//   &:hover {
+//     cursor: pointer;
+//   }
+
+//   &:disabled {
+//     cursor: not-allowed;
+//   }
+
+//   @media (min-width: 1024px) {
+//     font-size: 18px;
+//     height: 60px;
+//   }
+// }
+
+// .primary {
+//   border-radius: 8px;
+//   border-width: 1px;
+//   border-style: solid;
+//   border-color: transparent;
+//   background-color: var(--primary-colors-purple);
+//   color: var(--primary-colors-white);
+
+//   &:hover {
+//     background: none;
+//     border-color: var(--primary-colors-purple);
+//     color: var(--primary-colors-purple);
+//   }
+
+//   &:disabled {
+//     background-color: var(--secondary-colors-dark-purple);
+//     color: #6f6f6f;
+//   }
+// }
+
+// .secondary {
+//   border-radius: 8px;
+//   border-width: 1px;
+//   border-style: solid;
+//   border-color: transparent;
+//   background-color: var(--primary-colors-green);
+//   color: var(--primary-colors-background);
+
+//   &:hover {
+//     background: none;
+//     border-color: var(--primary-colors-green);
+//     color: var(--primary-colors-green);
+//   }
+
+//   &:disabled {
+//     background-color: var(--secondary-colors-dark-purple);
+//     color: #6f6f6f;
+//   }
+// }
+
+// .outlined {
+//   border-radius: 8px;
+//   border-width: 1px;
+//   border-style: solid;
+//   border-color: var(--secondary-colors-white-50);
+//   color: var(--primary-colors-white);
+
+//   &:hover {
+//     border-color: var(--primary-colors-purple);
+//     color: var(--primary-colors-purple);
+//   }
+
+//   &:disabled {
+//     background: none;
+//     color: rgba(111, 111, 111, 0.5);
+//     border-color: rgba(111, 111, 111, 0.5);
+//   }
+// }

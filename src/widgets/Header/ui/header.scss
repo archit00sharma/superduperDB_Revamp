@@ -1,0 +1,122 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 64px;
+  width: 100%;
+  // background: linear-gradient(180deg, #7628f8 41px, rgba(131, 58, 180, 0) 41.5px);
+  transition: transform 0.1s linear;
+
+  @media (max-width: 425px) {
+    background: none;
+  }
+
+  & .pre_head {
+    background: #7628f8;
+    height: 41px;
+    text-align: center;
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    padding-inline: 30px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: white;
+
+    @media (max-width: 425px) {
+      display: none;
+    }
+  }
+
+  & .git_star {
+    display: flex;
+    color: black;
+    font-weight: 600;
+  }
+
+  & .git_text {
+    height: 26px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 0 8px;
+    background-color: #ebf0f4;
+    border-radius: 3px 0 0 3px;
+  }
+
+  & .git_number {
+    height: 26px;
+    font-size: 12px !important;
+    padding: 0 8px;
+    background-color: white;
+    border-radius: 0 3px 3px 0;
+    border-left: 1px solid #bfc5ca;
+  }
+
+  & .web_icon {
+    padding-top: 5px;
+  }
+
+  & .pre_head_text {
+    span {
+      vertical-align: middle;
+    }
+
+    @media (max-width: 850px) {
+      display: none;
+    }
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 96%;
+    max-width: 1400px;
+    border-bottom: 1px solid var(--secondary-colors-white-20);
+    // background: var(--background);   
+  }
+
+  &.hide {
+    transform: translateY(-108px);
+  }
+
+  @media (min-width: 768px) {
+    height: 93px;
+
+    &.hide {
+      transform: translateY(-137px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    // padding: 0 2%;
+  }
+}
+
+.header-get-started-btn {
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.socialIcons {
+  padding-top: 5px;
+  transition-property: color background-color border-color;
+  transition-duration: 0 2s;
+  transition-timing-function: linear;
+
+  :hover {
+    fill: black;
+  }
+}

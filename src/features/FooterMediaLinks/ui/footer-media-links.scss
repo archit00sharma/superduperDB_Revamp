@@ -1,0 +1,26 @@
+.footer-media-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  @media (min-width: 768px) {
+    gap: 24px;
+  }
+
+  @media (min-width: 1024px) {
+    text-align: right;
+    font-size: 18px;
+  }
+}
+
+.footer-media-link {
+  color: var(--secondary-colors-grey);
+
+  &:hover {
+    color: var(--primary-colors-white);
+  }
+}

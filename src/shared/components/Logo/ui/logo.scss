@@ -1,0 +1,21 @@
+.logo {
+  height: 34px;
+  max-height: 34px;
+  scale: 1;
+  /* Default scale value for all screens */
+  margin-top: 5px;
+  @media (min-width: 768px) {
+    .logo {
+      scale: 1.3;
+      /* Scale value for screens with width >= 768px */
+    }
+    margin-top: 5px;
+  }
+  /* Media query for big screens (adjust the max-width value as needed) */
+  @media (min-width: 1020px) {
+    scale: 1.4;
+    /* Scale value for big screens */
+    margin-left: 36px;
+    margin-top: 5px;
+  }
+}

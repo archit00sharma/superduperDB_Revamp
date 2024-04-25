@@ -1,0 +1,35 @@
+.main-layout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-layout__container {
+  display: flex;
+  // flex-direction: column;
+  // width: 100%;
+  width: 100%;
+  position: relative;
+  background-color: var(--background);
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 26.375rem;
+  gap: 3.75rem;
+  line-height: normal;
+  letter-spacing: normal;
+  // padding: 64px 15px 0 15px;
+
+  // @media (min-width: 768px) {
+  //   padding: 93px 15px 0 15px;
+  // }
+
+  // @media (min-width: 1024px) {
+  //   padding: 93px 2% 0 2%;
+  // }
+
+  // @media (min-width: 1440px) {
+  //   max-width: 1440px;
+  // }
+}

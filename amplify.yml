@@ -1,0 +1,23 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - yarn install
+        - echo "STORYBLOK_ACCESS_TOKEN=$STORYBLOK_ACCESS_TOKEN" >> .env
+        - echo "MAILCHIMP_AUDIENCE_ID=$MAILCHIMP_AUDIENCE_ID" >> .env
+        - echo "MAILCHIMP_API_URL=$MAILCHIMP_API_URL" >> .env
+        - echo "MAILCHIMP_API_KEY=$MAILCHIMP_API_KEY" >> .env
+        - echo "NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL" >> .env
+        - echo "NEXT_SCRIPTS_LOAD=$NEXT_SCRIPTS_LOAD" >> .env
+        - echo "NODE_SERVER=$NODE_SERVER" >> .env
+    build:
+      commands:
+        - yarn run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
