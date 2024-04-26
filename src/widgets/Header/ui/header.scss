@@ -79,10 +79,10 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 96%;
-    max-width: 1400px;
+    width: 100%;
+    max-width: 1440px;
     border-bottom: 1px solid var(--secondary-colors-white-20);
-    // background: var(--background);   
+    // background: var(--background);
   }
 
   &.hide {
@@ -90,7 +90,8 @@
   }
 
   @media (min-width: 768px) {
-    height: 93px;
+    height: 7.5rem;
+    // background-color: var(--background);
 
     &.hide {
       transform: translateY(-137px);

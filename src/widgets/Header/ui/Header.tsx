@@ -105,15 +105,7 @@ const Header = () => {
           <Logo />
           <HeaderMenu isOpen={isMenuOpen} />
           <BurgerMenu isOpen={isMenuOpen} onClick={handleToggleMenu} />
-          <div className="header-get-started-btn">
-            <Link href="join-beta-waitlist">
-              <Button
-                label="Join Waitlist"
-                variant="outlined"
-                fullWidth
-              />
-            </Link>
-          </div>
+
         </div>
       </header>
     </>

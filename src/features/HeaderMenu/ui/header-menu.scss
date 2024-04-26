@@ -1,12 +1,26 @@
 .header-menu {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  // gap: 40px;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
   padding: 40px 0;
+  list-style: none;
+
+
+
+
+  & a {
+    font-family: var(--desktop-mono-paragraph-medium);
+    text-decoration: none;
+    color: var(--base-white);
+
+    &:hover {
+      color: var(--primary-colors-purple);
+    }
+  }
 
   &__container {
     position: fixed;
@@ -23,10 +37,12 @@
     padding: 16px;
     z-index: 1;
     overflow-y: auto;
+    overscroll-behavior: contain;
 
     &.active {
       right: 0;
       transition: all 0.2s ease;
+      background-color: var(--background);
     }
 
     a {
@@ -62,6 +78,7 @@
     align-items: center;
     width: 100%;
     padding-top: 40px;
+    color: var(--text-icon-secondary);
     border-top: 1px solid var(--secondary-colors-white-20);
   }
 
@@ -75,7 +92,7 @@
     }
 
     &__join-us-container {
-      padding-top: 60px;
+      padding-block: 60px;
     }
   }
 
@@ -95,11 +112,11 @@
 
   @media (min-width: 1200px) {
     flex-direction: row;
-    gap: 55px;
+    // gap: 55px;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%;
+    // line-height: 150%;
     padding: 0;
 
     &__container {

@@ -13,13 +13,33 @@ import './header-menu.scss';
 
 const navLinks = [
   {
-    label: 'Docs',
-    href: links.documentation,
+    label: 'Use-Cases',
+    href: links.use_cases,
+    isExternal: true,
+  },
+  // {
+  //   label: 'Slack',
+  //   href: links.slack,
+  //   isExternal: true,
+  // },
+  {
+    label: 'Enterprise',
+    href: links.slack,
     isExternal: true,
   },
   {
-    label: 'Use Cases',
-    href: links.use_cases,
+    label: 'Company',
+    href: links.careers,
+    isExternal: true,
+  },
+  // {
+  //   label: 'Careers',
+  //   href: links.careers,
+  //   isExternal: true,
+  // },
+  {
+    label: 'Docs',
+    href: links.documentation,
     isExternal: true,
   },
   {
@@ -27,21 +47,11 @@ const navLinks = [
     href: links.blog,
     isExternal: true,
   },
-  {
-    label: 'Slack',
-    href: links.slack,
-    isExternal: true,
-  },
-  {
-    label: 'Careers',
-    href: links.careers,
-    isExternal: true,
-  },
-  {
-    label: 'Contact Us',
-    href: links.contact,
-    isExternal: true,
-  },
+  // {
+  //   label: 'Contact Us',
+  //   href: links.contact,
+  //   isExternal: true,
+  // },
 
 ];
 
@@ -75,29 +85,26 @@ const HeaderMenu: FC<HeaderMenuProps> = ({ isOpen }) => {
       <nav className="header-menu__wrapper">
         <ul className="header-menu">
           {navLinks.map((link) => (
-            <li key={link.href} className="header-menu__item">
+            <li key={link.href} className="nav-link">
               <Link href={link.href} target={link.isExternal ? '_blank' : ''}>
                 {link.label}
               </Link>
             </li>
           ))}
+          <li className="get-started-btn">
+            <Link href="join-beta-waitlist">
+              <Button
+                className='button'
+                label="Get Started"
+                variant="outlined"
+              // fullWidth
+              />
+            </Link>
+          </li>
         </ul>
+
       </nav>
-      <div className="header-menu__buttons-container">
-        <Link href="join-beta-waitlist">
-          <Button
-            label="Join Waitlist"
-            variant="outlined"
-            fullWidth
-          />
-        </Link>
-        {/* <Button
-          label="Pip"
-          variant="outlined"
-          fullWidth
-          onClick={() => handleExternalNavigation(links.pipInstall)}
-        /> */}
-      </div>
+
       <div className="header-menu__join-us-container">
         <h3>Join our community</h3>
         {communityLinks.map(({ link, label, icon }) => (
