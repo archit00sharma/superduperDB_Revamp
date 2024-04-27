@@ -15,7 +15,6 @@ import './header.scss';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [starCount, setStarCount] = useState(null);
 
   const handleToggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
@@ -56,25 +55,11 @@ const Header = () => {
   }, [isMenuOpen]);
 
 
-  useEffect(() => {
-    const fetchStarCount = async () => {
-      try {
-        const response = await axios.get(`https://api.github.com/repos/SuperDuperDB/superduperdb`);
-        const count = response.data.stargazers_count;
-        setStarCount(count);
-      } catch (error) {
-        console.error('Error fetching star count:', error);
-      }
-    };
-
-    fetchStarCount();
-  }, []);
 
   const handleGitHubLinkClick = (event: any) => {
     const allowedTags = ['svg', 'path', 'span', 'a'];
 
     if (!allowedTags.includes(event.target.tagName.toLowerCase().trim())) {
-      // Open the link in a new tab or window
       window.open('https://github.com/SuperDuperDB/superduperdb', '_blank');
     }
   };
@@ -105,7 +90,6 @@ const Header = () => {
           <Logo />
           <HeaderMenu isOpen={isMenuOpen} />
           <BurgerMenu isOpen={isMenuOpen} onClick={handleToggleMenu} />
-
         </div>
       </header>
     </>

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Link from 'next/link';
 import { FC } from 'react';
 import { useEffect, useState, } from 'react';
 
@@ -73,13 +74,13 @@ const HomePage: FC = () => {
                                  <div className="frame-parent3">
                                     <div className="the-ultimate-ai-tool-to-work-w-parent">
                                        <h1 className="the-ultimate-ai">
-                                          Build, deploy and manage any AI on your existing <span className='position-relative'>data 
-                                          <img
-                                             className="line-1"
-                                             loading="lazy"
-                                             alt=""
-                                             src="../../../../images/homeunderline.svg"
-                                          />
+                                          Build, deploy and manage any AI on your existing <span className='position-relative'>data
+                                             <img
+                                                className="line-1"
+                                                loading="lazy"
+                                                alt=""
+                                                src="../../../../images/homeunderline.svg"
+                                             />
                                           </span> infrastructure
                                        </h1>
                                     </div>
@@ -99,18 +100,22 @@ const HomePage: FC = () => {
                               <div className="button-grid-wrapper">
                                  <div className="button-grid">
                                     <button className="button2">
-                                       <div className="button3">Enterprise</div>
+                                       <Link href="/enterprise" style={{ textDecoration: 'none' }}>
+                                          <div className="button3">Enterprise</div>
+                                       </Link>
                                     </button>
-                                    <button className="button4">
-                                       <div className="button5">Open-Source on Github</div>
-                                       <div className="fiarrow-right-wrapper">
-                                          <img
-                                             className="fiarrow-right-icon"
-                                             alt=""
-                                             src="../../../../images/fi_arrow-rig_white.svg"
-                                          />
-                                       </div>
-                                    </button>
+                                    <Link style={{ textDecoration: 'none' }} href="https://github.com/SuperDuperDB/superduperdb" target="_blank" rel="noopener noreferrer">
+                                       <button className="button4">
+                                          <div className="button5">Open-Source on Github</div>
+                                          <div className="fiarrow-right-wrapper">
+                                             <img
+                                                className="fiarrow-right-icon"
+                                                alt=""
+                                                src="../../../../images/fi_arrow-rig_white.svg"
+                                             />
+                                          </div>
+                                       </button>
+                                    </Link>
                                  </div>
                               </div>
                               <div className="frame5">
