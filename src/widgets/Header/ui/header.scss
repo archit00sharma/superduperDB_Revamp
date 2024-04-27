@@ -3,7 +3,9 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  z-index: 3;
+  z-index: 3789;
+  background: linear-gradient(90deg, rgba(28, 28, 40, 1) 0%, rgba(28, 28, 40, 0.9333858543417367) 100%);
+
   position: fixed;
   left: 0;
   top: 0;
@@ -96,6 +98,17 @@
     &.hide {
       transform: translateY(-137px);
     }
+  }
+
+  @media (max-width: 768px) {
+    height: 5rem;
+    // background-color: var(--background);
+  }
+
+  @media (max-width: 425px) {
+    height: 5rem;
+    padding: var(--padding-3xs);
+    // background-color: var(--background);
   }
 
   @media (min-width: 1024px) {

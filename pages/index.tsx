@@ -5,126 +5,118 @@ import { metaData } from 'shared/constants';
 import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
+import Slack from 'shared/components/Slack/ui/Slack';
 
 
 const HomePage: FC = () => {
 
 
-  return (
-    <MainLayout {...metaData.main}>
-      <div data-page="home">
-        <section>
-          <div className="home-desktop">
-            <section className="main-content">
-              <img
-                className="grid-top-zero-height"
-                loading="lazy"
-                alt=""
-                src="../../../../images/enterpriseGrid.svg"
-              />
-            </section>
+   return (
+      <MainLayout {...metaData.main}>
+         <div data-page="home">
+            <section>
+               <div className="home-desktop">
+                  <section className="main-content">
+                     <img
+                        className="grid-top-zero-height"
+                        loading="lazy"
+                        alt=""
+                        src="../../../../images/enterpriseGrid.svg"
+                     />
+                  </section>
 
-            <img
-              className="bg-2-1-icon"
-              loading="lazy"
-              alt=""
-              src="../../../../images/bg.svg"
-            />
-            <section className="frame-parent">
-              <div className="frame-container">
-                <div className="frame-group">
-                  <div className="frame-div">
-                    <div className="frame-parent1">
-                      <div className="frame-wrapper1">
-                        <div className="frame-parent2">
-                          <div className="v02-launch-date-1504-wrapper">
-                            <div className="v02-launch-date">
-                              V0.2 Launch date: 15/04
-                            </div>
-                          </div>
-                          <button className="badge">
-                            <div className="content">
-                              <i className="label">Check it out</i>
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                      <div className="frame-parent3">
-                        <div className="the-ultimate-ai-tool-to-work-w-parent">
-                          <h1 className="the-ultimate-ai">
-                            Build, deploy and manage any AI on your existing <span className='position-relative'>data <img
-                              className="line-1"
-                              loading="lazy"
-                              alt=""
-                              src="../../../../images/homeunderline.svg"
-                            /></span> infrastructure
-                          </h1>
-                        </div>
-                        <div className="supporting-text">
-                          <div className="superduperdb-is-a-tool-that-le">
-                            <p className="you-work-with-python-and-a-few">
-                              <i className="you-work-with">
-                                SuperDuperDB is unifying platform for faster, more secure and more scalable AI development and deployment, <i className="superduperdb-is-a">
-                                  eliminating fragile data pipelines, glue code and repetitive infrastructure work by integrating AI with your existing database into a single environment.
-                                </i>
-                              </i>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="button-grid-wrapper">
-                      <div className="button-grid">
-                        <button className="button2">
-                          <div className="button3">Enterprise</div>
-                        </button>
-                        <button className="button4">
-                          <div className="button5">Open-Source on Github</div>
-                          <div className="fiarrow-right-wrapper">
-                            <img
-                              className="fiarrow-right-icon"
-                              alt=""
-                              src="../../../../images/fi_arrow-rig_white.svg"
-                            />
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                    <div className="frame5">
-                      <div className="features-grid">
-                        <div className="features-column">
-                          <div className="div">4300 ★</div>
-                          <div className="github-open-source">GitHub Open Source</div>
-                        </div>
-                        <div className="features-column1">
-                          <div className="div1">500+</div>
-                          <div className="forks">Forks</div>
-                        </div>
-                        <div className="features-column2">
-                          <div className="div2">10+</div>
-                          <div className="ready-use-cases">Ready Use Cases</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <img
+                     className="bg-2-1-icon"
+                     loading="lazy"
+                     alt=""
+                     src="../../../../images/bg.svg"
+                  />
+                  <section className="frame-parent">
+                     <div className="frame-container">
+                        <div className="frame-group">
+                           <div className="frame-div">
+                              <div className="frame-parent1">
+                                 <div className="frame-wrapper1">
+                                    <div className="frame-parent2">
+                                       <div className="v02-launch-date-1504-wrapper">
+                                          <div className="v02-launch-date">
+                                             V0.2 Launch date: 15/04
+                                          </div>
+                                       </div>
+                                       <button className="badge">
+                                          <div className="content">
+                                             <i className="label">Check it out</i>
+                                          </div>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div className="frame-parent3">
+                                    <div className="the-ultimate-ai-tool-to-work-w-parent">
+                                       <h1 className="the-ultimate-ai">
+                                          Build, deploy and manage any AI on your existing <span className='position-relative'>data <img
+                                             className="line-1"
+                                             loading="lazy"
+                                             alt=""
+                                             src="../../../../images/homeunderline.svg"
+                                          />
+                                          </span> infrastructure
+                                       </h1>
+                                    </div>
+                                    <div className="supporting-text">
+                                       <div className="superduperdb-is-a-tool-that-le">
+                                          <p className="you-work-with-python-and-a-few">
+                                             <i className="you-work-with">
+                                                SuperDuperDB is unifying platform for faster, more secure and more scalable AI development and deployment, <i className="superduperdb-is-a">
+                                                   eliminating fragile data pipelines, glue code and repetitive infrastructure work by integrating AI with your existing database into a single environment.
+                                                </i>
+                                             </i>
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div className="button-grid-wrapper">
+                                 <div className="button-grid">
+                                    <button className="button2">
+                                       <div className="button3">Enterprise</div>
+                                    </button>
+                                    <button className="button4">
+                                       <div className="button5">Open-Source on Github</div>
+                                       <div className="fiarrow-right-wrapper">
+                                          <img
+                                             className="fiarrow-right-icon"
+                                             alt=""
+                                             src="../../../../images/fi_arrow-rig_white.svg"
+                                          />
+                                       </div>
+                                    </button>
+                                 </div>
+                              </div>
+                              <div className="frame5">
+                                 <div className="features-grid">
+                                    <div className="features-column">
+                                       <div className="div">4300 ★</div>
+                                       <div className="github-open-source">GitHub Open Source</div>
+                                    </div>
+                                    <div className="features-column1">
+                                       <div className="div1">500+</div>
+                                       <div className="forks">Forks</div>
+                                    </div>
+                                    <div className="features-column2">
+                                       <div className="div2">10+</div>
+                                       <div className="ready-use-cases">Ready Use Cases</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
 
-                </div>
-              </div>
-              <div className="wrapper-grid-header-parent">
-                {/* <h1 className="heading">What you can do with SuperDuperDB?</h1>
-                <i className="supporting-text1">
-                  Start right now from simple use-cases:
-                </i> */}
-                <img
-                  className="down-arrow-icon"
-                  loading="lazy"
-                  alt=""
-                  src="../../../../images/Down arrow.svg"
-                />
-              </div>
-            </section>
-            <div className="integrations" />
-            {/* <section className="functionality-grid-parent">
+                        </div>
+                     </div>
+
+                  </section>
+
+                  <div className="integrations" />
+                  {/* <section className="functionality-grid-parent">
                      <div className="functionality-grid">
                         <div className="functionality-column-pair">
                            <div className="div-w-node-05e3ca4f-c46f-f45">
@@ -898,336 +890,358 @@ const HomePage: FC = () => {
                         </div>
                      </div>
                   </section> */}
-            <section className="logos-parent">
-              <div className="logos"></div>
-              <div className="logos1" />
-              <div className="logos2"></div>
-              <div className="logos3" />
-              <div className="logos4" />
-              <div className="logos5" />
-              <div className="logos6" />
-              <div className="logos7" />
-              <img
-                className="xoracle-icon"
-                loading="lazy"
-                alt=""
-                src="../../../../images/2Xoracle.svg"
-              />
-              <img
-                className="xsnowflake-icon"
-                loading="lazy"
-                alt=""
-                src="../../../../images/2Xsnowflake.svg"
-              />
-              <img
-                className="xmongodb-icon"
-                loading="lazy"
-                alt=""
-                src="../../../../images/2Xmongodb.svg"
-              />
-              <img
-                className="xmysql-icon"
-                loading="lazy"
-                alt=""
-                src="../../../../images/2Xmysql.svg"
-              />
-              <img
-                className="xpostgresql-icon"
-                loading="lazy"
-                alt=""
-                src="../../../../images/2Xpostgresql.svg"
-              />
-              <img
-                className="xsqlite-icon"
-                loading="lazy"
-                alt=""
-                src="../../../../images/2Xsqlite.svg"
-              />
-              <img
-                className="xaws-s3-icon"
-                loading="lazy"
-                alt=""
-                src="../../../../images/2Xaws-s3.svg"
-              />
-              <img
-                className="xduckdb-icon"
-                loading="lazy"
-                alt=""
-                src="../../../../images/2Xduckdb.svg"
-              />
-            </section>
-            <section className="benefits">
-              <div className="benefits-header">
-                <div className="benefits-title">
-                  <h1 className="benefits-of-superduperdb">
-                    Benefits of SuperDuperDB
-                  </h1>
-                  <div className="benefits-icon-wrapper">
-                    <div className="benefits-icon">
-                      <div className="benefit">
-                        <i className="deploy-train-integrate">
-                          Deploy, Train, Integrate, and Search with Ease
-                        </i>
-                      </div>
-                      <img
-                        className="ionarrow-forward-outline-icon"
-                        alt=""
-                        src="../../../../images/accent-arrow.svg"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="benefit-cards">
-                <div className="card">
-                  <div className="image-card">
-                    <div className="main-card">
-                      <div className="content1">
-                        <b className="python-native">Python-Native</b>
-                        <div className="no-mlops-experience-container">
-                          <p className="no-mlops-experience">
-                            No MLOps experience needed.
-                          </p>
-                          <p className="apply-ai-with">
-                            Apply AI with a few commands.
-                          </p>
-                        </div>
-                        <div className="dividers" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="card1">
-                  <div className="image-card1">
-                    <div className="main-card1">
-                      <div className="content2">
-                        <b className="framework-friendly">Framework-Friendly</b>
-                        <div className="supports-pytorch-sklearn">
-                          Supports PyTorch, Sklearn, HuggingFace, and more for easy
-                          integration.
-                        </div>
-                        <div className="frame6" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="card2">
-                  <div className="image-card2">
-                    <div className="main-card2">
-                      <div className="content3">
-                        <b className="extensible-ecosystem">Extensible Ecosystem</b>
-                        <div className="flexible-and-customizable">
-                          Flexible and customizable to fit diverse data and model
-                          needs.
-                        </div>
-                        <div className="frame7" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="card3">
-                  <div className="image-card3">
-                    <div className="main-card3">
-                      <div className="content4">
-                        <b className="simple-deployment">Simple Deployment</b>
-                        <div className="deploy-ai-models">
-                          Deploy AI models and compute outputs with Python commands in
-                          one environment.
-                        </div>
-                        <div className="frame8" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="card4">
-                  <div className="image-card4">
-                    <div className="main-card4">
-                      <div className="content5">
-                        <b className="effortless-training">Effortless Training</b>
-                        <div className="directly-train-models">
-                          Directly train models on your data without extra steps for
-                          ingestion and pre-processing.
-                        </div>
-                        <div className="frame9" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="card5">
-                  <div className="image-card5">
-                    <div className="main-card5">
-                      <div className="content6">
-                        <b className="seamless-integration">Seamless Integration</b>
-                        <div className="easily-integrate-ai">
-                          Easily integrate AI APIs, including OpenAI, enhancing model
-                          cooperation.
-                        </div>
-                        <div className="frame10" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <img className="control-icon" alt="" src="../../../../images/control.svg" />
-            <section className="integrations1">
-              <div className="integrations-header">
-                <div className="integrations-heading">
-                  <h1 className="heading2">AI Integrations</h1>
-                  <img className="sparkle-11" alt="" src="../../../../images/sparkle.svg" />
-                </div>
-                <div className="integrations-docs">
-                  <div className="docs-link1">
-                    <i className="check-it-out1">
-                      Check it out how to integrate in our docs
-                    </i>
-                    <img
-                      className="fiarrow-right-icon2"
-                      alt=""
-                      src="../../../../images/accent-arrow.svg"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="integration-logos">
-                {/* <div style="display: flex;flex-wrap: wrap;"> */}
-                <div className="logo-row1">
-                  <img
-                    className="xpytorch-icon"
-                    loading="lazy"
-                    alt=""
-                    src="../../../../images/2Xjina.svg"
-                  />
-                </div>
-                <div className="logo-row1">
-                  <img
-                    className="xpytorch-icon"
-                    loading="lazy"
-                    alt=""
-                    src="../../../../images/2Xpytorch.svg"
-                  />
-                </div>
-                <div className="logo-row1">
-                  <img
-                    className="xpytorch-icon"
-                    loading="lazy"
-                    alt=""
-                    src="../../../../images/2Xscikit-learn.svg"
-                  />
-                </div>
-                <div className="logo-row1">
-                  <img
-                    className="xpytorch-icon"
-                    loading="lazy"
-                    alt=""
-                    src="../../../../images/1681142315open-ai-logo 1.svg"
-                  />
-                </div>
-                <div className="logo-row1">
-                  <img
-                    className="xpytorch-icon"
-                    loading="lazy"
-                    alt=""
-                    src="../../../../images/2Xanthropic.jpg"
-                  />
-                </div>
-                <div className="logo-row1">
-                  <img
-                    className="xpytorch-icon"
-                    loading="lazy"
-                    alt=""
-                    src="../../../../images/2Xcohere.svg"
-                  />
-                </div>
-                <div className="logo-row1">
-                  <img
-                    className="xpytorch-icon"
-                    loading="lazy"
-                    alt=""
-                    src="../../../../images/2Xhuggingface-transformers.svg"
-                  />
-                </div>
-                {/* </div> */}
-              </div>
-            </section>
-          </div>
-        </section>
-        <section className="application-process">
 
-          <div className="d-flex" >
-            <div className="rectangle-parent">
-              <div className="frame-child" />
-              <div className="deployment-image">
-                <div className="deployment-icon">
-                  <div className="circle" />
+                  <section className='not-a-database'>
+                     <img className="database-grid" alt="" src="../../../../images/database-grid.svg" />
+                     <div className="wrapper-grid-header-parent">
+                        <img
+                           className="down-arrow-icon"
+                           loading="lazy"
+                           alt=""
+                           src="../../../../images/Down arrow.svg"
+                        />
+                     </div>
+                     <div className='database-head'>
+                        SuperDuperDB
+                        <img className="sparkle-1" alt="" src="../../../../images/sparkle.svg" />
+                        <br />
+                        is not a database
+                     </div>
+                     <div className='database-title'>
+                        <i>SuperDuperDB integrates with major databases, <br />
+                           facilitating data transfer to AI models APIs and frameworks.</i>
+                     </div>
+                     <div className="database-logos">
+                        <div className="logo-row1">
+                           <img
+                              className="database-logo"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xpostgresql.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="database-logo"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xsqlite.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="database-logo"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xsnowflake.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="database-logo"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xmysql.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="database-logo"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xaws-s3.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="database-logo"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xmongodb.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="database-logo"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xoracle.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="database-logo"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xduckdb.svg"
+                           />
+                        </div>
+                        {/* </div> */}
+                     </div>
+                  </section>
+                  <section className="benefits">
+                     <div className="benefits-header">
+                        <div className="benefits-title">
+                           <h1 className="benefits-of-superduperdb">
+                              Why SuperDuperDB
+                           </h1>
+
+                        </div>
+                     </div>
+                     <div className="benefit-cards">
+                        <div className="card">
+                           <div className="image-card">
+                              <div className="main-card">
+                                 <div className="content1">
+                                    <b className="card-header">Faster Development of more robust AI apps</b>
+                                    <div className="card-text">
+                                       SuperDuperDB allows developers to configure AI workflows directly on their data. A declarative interface and modular architecture simplifies implementing custom AI workflows effortlessly using building blocks and reusable components. Leveraging our abstractions and plugins users can prototype super fast while still being able to drill down to any layer of customization, while producing high-quality code. Work with and leverage any Python package and major AI frameworks, tools and libraries. Flexibility accommodating the specific needs of different use-cases, data types and environments.
+                                    </div>
+                                    <div className="dividers" />
+                                    <img className="" alt="" src="../../../../images/card-icon.svg" />
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div className="card">
+                           <div className="image-card1">
+                              <div className="main-card">
+                                 <div className="content2">
+                                    <b className="card-header">Streamlined state-of
+                                       the art deployment </b>
+                                    <div className="card-text">
+                                       A single scalable environment of based on state-of-the art deployment technologies.
+                                       <br />
+                                       Facilitating distributed compute allows for maximum scalability and efficiency.
+                                       <br />
+                                       No setup of repetitive infrastructure and setup of ETL/data pipelines with every new application.
+                                       <br />
+                                       One deployment to serve them all.
+                                       <ul className='list-padding'>
+                                          <li>
+                                             Parameterizable Charts: expose only parameters that make sense.
+                                          </li>
+                                          <li>NodeGroups: cluster physical machines into cluster groups.</li>
+                                          <li>Workergroup: Assign cluster groups to ray worker groups.</li>
+                                          <li>Distributed Computing</li>
+                                          <li>Deploy Inference and training as REST API</li>
+                                          <li>Automation: Kubernetes operator for the deployment of AI Stack</li>
+                                          <li>Observability: Combine metrics from AI workflows with system Metrics</li>
+                                          <li>Single-Sign-One: login once and get access to the services.</li>
+                                          <li>Moreover, it leverages distributed computing capabilities to intelligently distribute tasks across machine clusters, thereby minimizing processing durations and optimizing reswource utilization for intensive AI tasks like model training and data analysis.</li>
+                                       </ul>
+
+
+
+                                    </div>
+                                    <div className="frame6" />
+                                    <img className="" alt="" src="../../../../images/card-icon.svg" />
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div className="card">
+                           <div className="image-card2">
+                              <div className="main-card">
+                                 <div className="content3">
+                                    <b className="card-header">A single platform for all enterprise AI </b>
+                                    <div className="card-text">
+                                       SuperDuperDB revolutionizes the landscape of enterprise AI applications by offering a singular, comprehensive platform that eliminates the need for switching between tools and environments. Ideal for companies of any size and industry, SuperDuperDB empowers users to effortlessly tackle diverse AI challenges, making it the ultimate solution for organizations seeking to streamline their AI workflows and achieve maximum efficiency and truly own their AI stack.
+
+                                    </div>
+                                    <div className="frame7" />
+                                    <img className="" alt="" src="../../../../images/card-icon.svg" />
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                     </div>
+                  </section>
+                  <img className="control-icon" alt="" src="../../../../images/control.svg" />
+                  <section className="integrations1">
+                     <img className="integration-grid" alt="" src="../../../../images/database-grid.svg" />
+
+                     <div className="integrations-header">
+                        <div className="integrations-heading">
+                           <h1 className="heading2">AI Integrations</h1>
+                           <img className="sparkle-11" alt="" src="../../../../images/sparkle.svg" />
+                        </div>
+                        <div className="integrations-docs">
+                           <div className="docs-link1">
+                              <i className="check-it-out1">
+                                 Check it out how to integrate in our docs
+                              </i>
+                              <img
+                                 className="fiarrow-right-icon2"
+                                 alt=""
+                                 src="../../../../images/accent-arrow.svg"
+                              />
+                           </div>
+                        </div>
+                     </div>
+                     <div className="integration-logos">
+                        <div className="logo-row1">
+                           <img
+                              className="xpytorch-icon"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xjina.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="xpytorch-icon"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xpytorch.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="xpytorch-icon"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xscikit-learn.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="xpytorch-icon"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/1681142315open-ai-logo 1.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="xpytorch-icon"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xanthropic.jpg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="xpytorch-icon"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xcohere.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="xpytorch-icon"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xhuggingface-transformers.svg"
+                           />
+                        </div>
+                        <div className="logo-row1">
+                           <img
+                              className="xpytorch-icon"
+                              loading="lazy"
+                              alt=""
+                              src="../../../../images/2Xhuggingface-transformers.svg"
+                           />
+                        </div>
+                        {/* </div> */}
+                     </div>
+                  </section>
+               </div>
+            </section>
+            <section className="application-process">
+               <img className="transform-grid" alt="" src="../../../../images/database-grid.svg" />
+               <div className="trainer-heading">
+                  <h1 className="heading3">
+                     <p className="superduperdb-transforms-your">
+                        SuperDuperDB transforms your database into:
+                     </p>
+                  </h1>
+
                   <img
-                    className="figit-pull-request-icon"
-                    alt=""
-                    src="../../../../images/fi_git-pull-request.svg"
+                     className="group-8-traced"
+                     loading="lazy"
+                     alt=""
+                     src="../../../../images/into_underline.svg"
                   />
-                </div>
-                <h2 className="an-end-to-end-ai">An end-to-end AI deployment</h2>
-              </div>
-              <div className="which-includes-a">
-                Which includes a model repository &amp; registry as well as computation
-                of outputs
-              </div>
-            </div>
-            <div className="rectangle-parent">
-              <div className="frame-child" />
-              <div className="deployment-image">
-                <div className="deployment-icon">
-                  <div className="circle" />
-                  <img
-                    className="figit-pull-request-icon"
-                    alt=""
-                    src="../../../../images/fi_grid.svg"
-                  />
-                </div>
-                <h2 className="an-end-to-end-ai">A model <br /> trainer</h2>
-              </div>
-              <div className="which-includes-a">
-                Allowing you to easily train and fine-tune your models simply by
-                querying your data(store)
-              </div>
-            </div>
-            <div className="rectangle-parent">
-              <div className="frame-child" />
-              <div className="deployment-image">
-                <div className="deployment-icon">
-                  <div className="circle" />
-                  <img
-                    className="figit-pull-request-icon"
-                    alt=""
-                    src="../../../../images/fi_package.svg"
-                  />
-                </div>
-                <h2 className="an-end-to-end-ai">A feature <br /> store</h2>
-              </div>
-              <div className="which-includes-a">
-                In which the model outputs are stored in desired formats and types,
-                instantly available in the datastore
-              </div>
-            </div>
-            <div className="rectangle-parent">
-              <div className="frame-child" />
-              <div className="deployment-image">
-                <div className="deployment-icon">
-                  <div className="circle" />
-                  <img
-                    className="figit-pull-request-icon"
-                    alt=""
-                    src="../../../../images/fi_database.svg"
-                  />
-                </div>
-                <h2 className="an-end-to-end-ai"> A vector <br /> database</h2>
-              </div>
-              <div className="which-includes-a">
-                Enabling straightforward generation of vector embeddings on your data
-                with your choice of models
-              </div>
-            </div>
-            {/* <div className="rectangle-parent">
+               </div>
+            </section>
+            <div className="d-flex" >
+               <div className="rectangle-parent">
+                  <div className="frame-child" />
+                  <div className="deployment-image">
+                     <div className="deployment-icon">
+                        <div className="circle" />
+                        <img
+                           className="figit-pull-request-icon"
+                           alt=""
+                           src="../../../../images/fi_git-pull-request.svg"
+                        />
+                     </div>
+                     <h2 className="an-end-to-end-ai">An end-to-end AI deployment</h2>
+                  </div>
+                  <div className="which-includes-a">
+                     Which includes a model repository &amp; registry as well as computation
+                     of outputs
+                  </div>
+               </div>
+               <div className="rectangle-parent">
+                  <div className="frame-child" />
+                  <div className="deployment-image">
+                     <div className="deployment-icon">
+                        <div className="circle" />
+                        <img
+                           className="figit-pull-request-icon"
+                           alt=""
+                           src="../../../../images/fi_grid.svg"
+                        />
+                     </div>
+                     <h2 className="an-end-to-end-ai">A model <br /> trainer</h2>
+                  </div>
+                  <div className="which-includes-a">
+                     Allowing you to easily train and fine-tune your models simply by
+                     querying your data(store)
+                  </div>
+               </div>
+               <div className="rectangle-parent">
+                  <div className="frame-child" />
+                  <div className="deployment-image">
+                     <div className="deployment-icon">
+                        <div className="circle" />
+                        <img
+                           className="figit-pull-request-icon"
+                           alt=""
+                           src="../../../../images/fi_package.svg"
+                        />
+                     </div>
+                     <h2 className="an-end-to-end-ai">A feature <br /> store</h2>
+                  </div>
+                  <div className="which-includes-a">
+                     In which the model outputs are stored in desired formats and types,
+                     instantly available in the datastore
+                  </div>
+               </div>
+               <div className="rectangle-parent">
+                  <div className="frame-child" />
+                  <div className="deployment-image">
+                     <div className="deployment-icon">
+                        <div className="circle" />
+                        <img
+                           className="figit-pull-request-icon"
+                           alt=""
+                           src="../../../../images/fi_database.svg"
+                        />
+                     </div>
+                     <h2 className="an-end-to-end-ai"> A vector <br /> database</h2>
+                  </div>
+                  <div className="which-includes-a">
+                     Enabling straightforward generation of vector embeddings on your data
+                     with your choice of models
+                  </div>
+               </div>
+               {/* <div className="rectangle-parent">
               <div className="trainer-header">
                 <div className="trainer-title">
                   <div className="trainer-heading">
@@ -1308,35 +1322,36 @@ const HomePage: FC = () => {
                 </div>
               </div>
             </div> */}
-          </div>
-        </section>
-        <section className="cta">
-          <div className="c-t-a-container">
-            <div className="c-t-a-content">
-              <div className="frame11">
-                <i className="have-a-project"> </i>
-                <h1 className="lets-create-something">
-                  Let’s create something awesome.
-                </h1>
-              </div>
-              <button className="button6">
-                <div className="button7">Get Started</div>
-                <img
-                  className="fiarrow-right-icon3"
-                  alt=""
-                  src="../../../../images/fi_arrow-right.svg"
-                />
-              </button>
             </div>
-          </div>
-        </section>
-        <div className="footer-background">
-          <img className="bg-2-1-icon1" alt="" src="../../../../images/bg-bottom.svg" />
-        </div>
-      </div>
 
-    </MainLayout>
-  );
+            <section className="cta">
+               <div className="c-t-a-container">
+                  <div className="c-t-a-content">
+                     <div className="frame11">
+                        <i className="have-a-project"> </i>
+                        <h1 className="lets-create-something">
+                           Let’s create something awesome.
+                        </h1>
+                     </div>
+                     <button className="button6">
+                        <div className="button7">Get Started</div>
+                        <img
+                           className="fiarrow-right-icon3"
+                           alt=""
+                           src="../../../../images/accent-arrow.svg"
+                        />
+                     </button>
+                  </div>
+               </div>
+            </section>
+            <div className="footer-background">
+               <img className="bg-2-1-icon1" alt="" src="../../../../images/bg-bottom.svg" />
+            </div>
+         </div>
+         <Slack/>
+
+      </MainLayout>
+   );
 };
 
 export default HomePage;

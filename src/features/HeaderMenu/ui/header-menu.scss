@@ -15,7 +15,7 @@
   & a {
     font-family: var(--desktop-mono-paragraph-medium);
     text-decoration: none;
-    color: var(--base-white);
+    color: var(--text-icon-secondary);
 
     &:hover {
       color: var(--primary-colors-purple);
@@ -46,7 +46,7 @@
     }
 
     a {
-      color: var(--base-white);
+      color: var(--text-icon-secondary);
 
       &:hover {
         color: var(--primary-colors-purple);
@@ -83,7 +83,6 @@
   }
 
   @media (min-width: 768px) {
-    align-items: center;
 
     &__container {
       height: calc(100% - 93px);
@@ -94,6 +93,10 @@
     &__join-us-container {
       padding-block: 60px;
     }
+  }
+
+  @media (max-width: 1200px) {
+    align-items: center;
   }
 
   // @media (min-width: 990px) {
