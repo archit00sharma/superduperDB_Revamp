@@ -1,11 +1,13 @@
+
 import { FC } from 'react';
 
-
+import Slack from 'shared/components/Slack/ui/Slack';
 import { metaData } from 'shared/constants';
 import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
-import Slack from 'shared/components/Slack/ui/Slack';
+
+
 
 
 const HomePage: FC = () => {
@@ -83,7 +85,7 @@ const HomePage: FC = () => {
                                 </div>
                             </div>
                             <div className="wed-love-to">
-                                We'd love to talk about how we can work together.
+                            We&apos;d love to talk about how we can work together.
                             </div>
                             <button className="contact-btn">
                                 <div className="action-label">Contact</div>

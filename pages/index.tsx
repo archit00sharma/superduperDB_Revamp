@@ -1,15 +1,32 @@
+import axios from 'axios';
 import { FC } from 'react';
+import { useEffect, useState, } from 'react';
 
 
+import Slack from 'shared/components/Slack/ui/Slack';
 import { metaData } from 'shared/constants';
 import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
-import Slack from 'shared/components/Slack/ui/Slack';
+
+
 
 
 const HomePage: FC = () => {
+   const [starCount, setStarCount] = useState(null);
+   useEffect(() => {
+      const fetchStarCount = async () => {
+         try {
+            const response = await axios.get(`https://api.github.com/repos/SuperDuperDB/superduperdb`);
+            const count = response.data.stargazers_count;
+            setStarCount(count);
+         } catch (error) {
+            console.error('Error fetching star count:', error);
+         }
+      };
 
+      fetchStarCount();
+   }, []);
 
    return (
       <MainLayout {...metaData.main}>
@@ -53,7 +70,8 @@ const HomePage: FC = () => {
                                  <div className="frame-parent3">
                                     <div className="the-ultimate-ai-tool-to-work-w-parent">
                                        <h1 className="the-ultimate-ai">
-                                          Build, deploy and manage any AI on your existing <span className='position-relative'>data <img
+                                          Build, deploy and manage any AI on your existing <span className='position-relative'>data 
+                                          <img
                                              className="line-1"
                                              loading="lazy"
                                              alt=""
@@ -95,7 +113,7 @@ const HomePage: FC = () => {
                               <div className="frame5">
                                  <div className="features-grid">
                                     <div className="features-column">
-                                       <div className="div">4300 ★</div>
+                                       <div className="div">{starCount !== null ? starCount : 'Loading...'} ★</div>
                                        <div className="github-open-source">GitHub Open Source</div>
                                     </div>
                                     <div className="features-column1">
@@ -1348,7 +1366,7 @@ const HomePage: FC = () => {
                <img className="bg-2-1-icon1" alt="" src="../../../../images/bg-bottom.svg" />
             </div>
          </div>
-         <Slack/>
+         <Slack />
 
       </MainLayout>
    );
