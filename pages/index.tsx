@@ -14,12 +14,15 @@ import "../src/features/USPSection/ui/USPSection"
 
 const HomePage: FC = () => {
    const [starCount, setStarCount] = useState(null);
+   const [forksCount, setForksCount] = useState(null);
    useEffect(() => {
       const fetchStarCount = async () => {
          try {
             const response = await axios.get(`https://api.github.com/repos/SuperDuperDB/superduperdb`);
-            const count = response.data.stargazers_count;
-            setStarCount(count);
+            const starCount = response.data.stargazers_count;
+            const forksCount = response.data.forks_count;
+            setStarCount(starCount);
+            setForksCount(forksCount);
          } catch (error) {
             console.error('Error fetching star count:', error);
          }
@@ -117,7 +120,7 @@ const HomePage: FC = () => {
                                        <div className="github-open-source">GitHub Open Source</div>
                                     </div>
                                     <div className="features-column1">
-                                       <div className="div1">500+</div>
+                                       <div className="div1">{forksCount !== null ? forksCount : 'Loading...'}+</div>
                                        <div className="forks">Forks</div>
                                     </div>
                                     <div className="features-column2">
