@@ -10,7 +10,8 @@ import "../src/features/USPSection/ui/USPSection"
 
 const HomePage: FC = () => {
   const { starCount, forksCount } = useGitHubRepoStats();
-  return (
+  
+return (
     <MainLayout {...metaData.main}>
       <div data-page="enterprise">
 
