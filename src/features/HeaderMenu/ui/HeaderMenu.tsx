@@ -24,13 +24,13 @@ const navLinks = [
   // },
   {
     label: 'Enterprise',
-    href: links.slack,
-    isExternal: true,
+    href: links.enterprise,
+    isExternal: false,
   },
   {
     label: 'Company',
-    href: links.careers,
-    isExternal: true,
+    href: links.about,
+    isExternal: false,
   },
   // {
   //   label: 'Careers',

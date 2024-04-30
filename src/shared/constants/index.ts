@@ -18,6 +18,8 @@ export const links = {
   careers: 'https://join.com/companies/superduperdb',
   pipInstall: 'https://pypi.org/project/superduperdb',
   community: 'https://github.com/SuperDuperDB/superduper-community-apps/',
+  enterprise: 'enterprise',
+  about: 'about',
 };
 
 export const metaData = {
