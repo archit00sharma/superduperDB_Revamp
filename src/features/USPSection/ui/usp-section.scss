@@ -190,6 +190,7 @@
     overflow: hidden;
     max-height: 100%;
     object-fit: cover;
+    opacity: 50%;
   }
 
   .feature-row-child {
@@ -1691,7 +1692,7 @@
     width: 90rem;
     overflow: hidden;
     flex-shrink: 0;
-    padding: var(--padding-69xl-5) var(--padding-xl);
+    padding: var(--padding-69xl-5) var(--padding-xl) 0;
     max-width: 101%;
   }
 
@@ -2217,6 +2218,7 @@
     right: 0.25rem;
     object-fit: cover;
     z-index: 1;
+    opacity: 50%;
   }
 
   .build-ai-apps,
@@ -2384,6 +2386,8 @@
     line-height: 2rem;
     display: inline-block;
     min-width: 5.063rem;
+    color: var(--text-icon-primary);
+    font-family: var(--desktop-mono-paragraph-large);
   }
 
   .github-open-source1 {
@@ -2403,6 +2407,11 @@
     padding: 0 var(--padding-lgi);
     box-sizing: border-box;
     min-width: 11.125rem;
+  }
+
+  .div6 {
+    color: var(--text-icon-primary);
+    font-family: var(--desktop-mono-paragraph-large);
   }
 
   .div6,
@@ -2439,6 +2448,8 @@
     line-height: 2rem;
     display: inline-block;
     min-width: 2.313rem;
+    color: var(--text-icon-primary);
+    font-family: var(--desktop-mono-paragraph-large);
   }
 
   .ready-use-cases1 {
@@ -4156,7 +4167,7 @@
   position: absolute;
   mix-blend-mode: darken;
   margin: 0 !important;
-  bottom: 23.438rem;
+  bottom: 7.5rem;
   left: 32.875rem;
   object-fit: contain;
   z-index: 2;
@@ -12179,7 +12190,7 @@
     align-self: stretch;
     align-items: flex-start;
     justify-content: center;
-    padding: 0 1.688rem 1.188rem var(--padding-xl);
+    padding: var(--padding-61xl) var(--padding-85xl);
     text-align: left;
     font-size: var(--font-size-13xl);
     color: var(--color-gray-100);

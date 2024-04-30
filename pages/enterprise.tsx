@@ -1,5 +1,6 @@
+import axios from 'axios';
 import { FC } from 'react';
-
+import { useEffect, useState, } from 'react';
 
 import { metaData } from 'shared/constants';
 import { MainLayout } from 'widgets/MainLayout';
@@ -9,6 +10,23 @@ import "../src/features/USPSection/ui/USPSection"
 
 const HomePage: FC = () => {
 
+  const [starCount, setStarCount] = useState(null);
+  const [forksCount, setForksCount] = useState(null);
+  useEffect(() => {
+    const fetchStarCount = async () => {
+      try {
+        const response = await axios.get(`https://api.github.com/repos/SuperDuperDB/superduperdb`);
+        const starCount = response.data.stargazers_count;
+        const forksCount = response.data.forks_count;
+        setStarCount(starCount);
+        setForksCount(forksCount);
+      } catch (error) {
+        console.error('Error fetching star count:', error);
+      }
+    };
+
+    fetchStarCount();
+  }, []);
 
   return (
     <MainLayout {...metaData.main}>
@@ -59,11 +77,11 @@ const HomePage: FC = () => {
           <div className="feature-grid">
             <div className="feature-headers">
               <div className="feature-labels">
-                <div className="div5">4300 ★</div>
+                <div className="div5">{starCount !== null ? starCount : 'Loading...'} ★</div>
                 <div className="github-open-source1">GitHub Open Source</div>
               </div>
               <div className="feature-labels1">
-                <div className="div6">500+</div>
+                <div className="div6">{forksCount !== null ? forksCount : 'Loading...'}+</div>
                 <div className="forks1">Forks</div>
               </div>
               <div className="feature-labels2">

@@ -25,10 +25,23 @@
 
 .nav-link {
    border-radius: var(--br-5xs);
-   padding: var(--padding-xs) var(--padding-base);
+
+   & a {
+      color: var(--text-icon-secondary);
+      padding: var(--padding-xs) var(--padding-base);
+      transition: all;
+      transition-duration: .3s;
+
+      &:hover {
+         color: var(--base-white);
+         width: 81px;
+         height: 48px;
+         padding: 12px 16px 12px 16px;
+         background-color: #4F4C64;
+         border-radius: 8px;
+      }
+   }
 }
-
-
 
 
 .title-row {
@@ -62,6 +75,8 @@
    color: var(--text-icon-primary);
    text-align: center;
    min-width: 6.5rem;
+
+
 
    @media (min-width:1200px) {
       margin-left: 30px;
