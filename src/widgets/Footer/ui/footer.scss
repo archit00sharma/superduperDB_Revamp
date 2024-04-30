@@ -10,7 +10,14 @@ footer {
   width: 100%;
   padding: 0;
   padding-top: 29px;
+  padding: 93px 2% 0;
+  width: auto;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--secondary-colors-grey);
+
+
+
+
 
   @media (min-width: 768px) {
     grid-template-areas:

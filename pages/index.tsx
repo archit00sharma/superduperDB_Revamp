@@ -6,6 +6,7 @@ import { useEffect, useState, } from 'react';
 
 import Slack from 'shared/components/Slack/ui/Slack';
 import { metaData } from 'shared/constants';
+import useGitHubRepoStats from 'shared/utils/fetGitStats';
 import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
@@ -14,23 +15,7 @@ import "../src/features/USPSection/ui/USPSection"
 
 
 const HomePage: FC = () => {
-   const [starCount, setStarCount] = useState(null);
-   const [forksCount, setForksCount] = useState(null);
-   useEffect(() => {
-      const fetchStarCount = async () => {
-         try {
-            const response = await axios.get(`https://api.github.com/repos/SuperDuperDB/superduperdb`);
-            const starCount = response.data.stargazers_count;
-            const forksCount = response.data.forks_count;
-            setStarCount(starCount);
-            setForksCount(forksCount);
-         } catch (error) {
-            console.error('Error fetching star count:', error);
-         }
-      };
-
-      fetchStarCount();
-   }, []);
+   const { starCount, forksCount } = useGitHubRepoStats();
 
    return (
       <MainLayout {...metaData.main}>

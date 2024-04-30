@@ -139,7 +139,7 @@
   .our-mission-is {
     margin: 0;
     align-self: stretch;
-    height: 9.375rem;
+    // height: 9.375rem;
     position: relative;
     font-size: inherit;
     letter-spacing: -0.04em;
@@ -157,7 +157,7 @@
   }
 
   .lorem-ipsum-dolor-container {
-    height: 8rem;
+    // height: 8rem;
     flex: 1;
     position: relative;
     letter-spacing: -0.02em;
@@ -199,6 +199,11 @@
     align-self: stretch;
     flex-direction: row;
     justify-content: flex-end;
+
+    @media(max-width:1350px) {
+      padding: 0 0 0 var(--padding-xl);
+      justify-content: flex-start;
+    }
   }
 
   .hero,
@@ -242,7 +247,7 @@
 
   .feature-row-child {
     width: 16.5rem;
-    height: 15.875rem;
+    // height: 15.875rem;
     position: relative;
     border-radius: var(--br-xs);
     background-color: var(--ff);
@@ -323,7 +328,7 @@
     padding: var(--padding-29xl) var(--padding-13xl);
     gap: var(--gap-5xl);
     position: absolute;
-    top: 1068px;
+    top: 1058px;
   }
 
   .feature-list {
@@ -343,7 +348,7 @@
   }
 
   .features {
-    height: 62.063rem;
+    // height: 62.063rem;
     width: 48.875rem;
     flex-direction: column;
     gap: var(--gap-50xl);
@@ -361,7 +366,7 @@
 
   .benefit-item-first-child {
     width: 16.5rem;
-    height: 15.875rem;
+    // height: 15.875rem;
     position: relative;
     border-radius: var(--br-xs);
     background-color: var(--color-blue);
@@ -447,7 +452,7 @@
 
   .icon-container-child {
     width: 16.5rem;
-    height: 15.875rem;
+    // height: 15.875rem;
     position: relative;
     border-radius: var(--br-xs);
     background-color: var(--ff);
@@ -534,7 +539,7 @@
 
   .benefit-item-container-child {
     width: 16.5rem;
-    height: 15.875rem;
+    // height: 15.875rem;
     position: relative;
     border-radius: var(--br-xs);
     background-color: var(--color-blue);
@@ -719,7 +724,7 @@
 
   .value-content-child {
     width: 90rem;
-    height: 41.125rem;
+    // height: 41.125rem;
     position: relative;
     background-color: var(--color-blue);
     display: none;
@@ -4223,7 +4228,7 @@
   position: absolute;
   mix-blend-mode: darken;
   margin: 0 !important;
-  bottom: 7.5rem;
+  bottom: 37.5rem;
   left: 32.875rem;
   object-fit: contain;
   z-index: 2;

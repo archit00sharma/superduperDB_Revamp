@@ -28,6 +28,7 @@ const SubscribeForm: FC<SubscribeFormProps> = ({ className }) => {
       <Button
         type="submit"
         variant="primary"
+        className='get-started-btn  button'
         label="Send"
         isDisabled={isSending}
         isLoading={isSending}

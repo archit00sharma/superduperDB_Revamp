@@ -35,7 +35,26 @@ input {
 .input__container {
   position: relative;
   max-width: 500px;
-  width:100%
+
+  width:100% & input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background-color: var(--color-whitesmoke);
+    align-self: stretch;
+    height: 3rem;
+    border-radius: var(--br-xs);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-xs) var(--padding-6xl);
+    box-sizing: border-box;
+    font-family: var(--font-roboto-mono);
+    font-size: var(--desktop-mono-paragraph-medium-size);
+    color: var(--color-lightslategray);
+    min-width: 15.625rem;
+  }
 }
 
 .input__icon {
@@ -57,4 +76,25 @@ input {
   font-weight: 400;
   line-height: 150%;
   padding-left: 16px;
+}
+
+
+.name-value {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-whitesmoke);
+  align-self: stretch;
+  height: 3rem;
+  border-radius: var(--br-xs);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-6xl);
+  box-sizing: border-box;
+  font-family: var(--font-roboto-mono);
+  font-size: var(--desktop-mono-paragraph-medium-size);
+  color: var(--color-lightslategray);
+  min-width: 15.625rem;
 }

@@ -123,7 +123,7 @@ const MainLayout: FC<MainLayoutProps> = ({
         <div className="main-layout__container">
           <Header />
           <main>{children}</main>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </div>
     </>
