@@ -14,11 +14,16 @@ const HomePage: FC = () => {
     <MainLayout {...metaData.main}>
       <div data-page="about">
         <section className="content">
+          <img className='people-image' src="../../../../images/people.svg" alt="" />
           <div className="hero-parent">
             <div className="hero">
               <div className="hero-content">
                 <div className="hero-details">
-                  <img className="line-1" loading="lazy" alt="" src="../../../../images/line-1.svg" />
+                  <div className='about-text'>About <br /> SuperDuperDB <img className="line-1" loading="lazy" alt="" src="../../../../images/line-1.svg" />
+                    <br />
+                    <span className='about-subtext'>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                  </div>
+
                   <div className="call-to-action">
                     <button className="button2">
                       <div className="button3">Contact us</div>
@@ -128,69 +133,65 @@ const HomePage: FC = () => {
             <div className="value-content-child"></div>
             <h1 className="our-value">Our value</h1>
             <div className="value-list">
-              <div className="value-row">
-                <div className="value-item-set">
-                  <div className="value-item-pair">
-                    <div className="value-pair">
-                      <div className="value-pair1">
-                        <div className="icon-pair"></div>
-                        <b className="separator">01</b>
-                      </div>
-                      <div className="value-pair-description">
-                        <div className="value-pair2">
-                          <h1 className="make-it-exist">Make it exist</h1>
-                          <div className="lorem-ipsum-dolor4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit,
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="value-item">
-                      <div className="icon"></div>
-                      <b className="separator1">02</b>
-                    </div>
-                  </div>
-                  <div className="value-item-pair1">
-                    <div className="frame-parent">
-                      <div className="ellipse-parent">
-                        <div className="frame-child"></div>
-                        <b className="b">03</b>
-                      </div>
-                      <div className="frame-wrapper">
-                        <div className="make-it-useful-parent">
-                          <h1 className="make-it-useful">Make it useful</h1>
-                          <div className="sed-do-eiusmod">
-                            sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam,
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="ellipse-group">
-                      <div className="frame-item"></div>
-                      <b className="b1">04</b>
+              <div className="value-pair">
+                <div className="value-pair1">
+                  <div className="icon-pair"></div>
+                  <b className="separator">01</b>
+                </div>
+                <div className="value-pair-description">
+                  <div className="value-pair2">
+                    <h1 className="make-it-exist">Make it exist</h1>
+                    <div className="lorem-ipsum-dolor4">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit,
                     </div>
                   </div>
                 </div>
-                <div className="value-item-set1">
-                  <div className="value-item-pair2">
-                    <h1 className="make-it-simple">Make it simple</h1>
-                    <div className="sed-do-eiusmod1">
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostru
+              </div>
+              <div className="value-pair">
+                <div className="value-pair1">
+                  <div className="icon-pair"></div>
+                  <b className="separator">02</b>
+                </div>
+                <div className="value-pair-description">
+                  <div className="value-pair2">
+                    <h1 className="make-it-exist">Make it simple</h1>
+                    <div className="lorem-ipsum-dolor4">
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru
                     </div>
                   </div>
-                  <div className="value-item-pair3">
-                    <h1 className="make-it-worth">Make it worth</h1>
-                    <div className="sed-do-eiusmod2">
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam,
+                </div>
+              </div>
+              <div className="value-pair">
+                <div className="value-pair1">
+                  <div className="icon-pair"></div>
+                  <b className="separator">03</b>
+                </div>
+                <div className="value-pair-description">
+                  <div className="value-pair2">
+                    <h1 className="make-it-exist">Make it useful</h1>
+                    <div className="lorem-ipsum-dolor4">
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="value-pair">
+                <div className="value-pair1">
+                  <div className="icon-pair"></div>
+                  <b className="separator">04</b>
+                </div>
+                <div className="value-pair-description">
+                  <div className="value-pair2">
+                    <h1 className="make-it-exist">Make it worth</h1>
+                    <div className="lorem-ipsum-dolor4">
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </section>
         <section className="team-content-wrapper">

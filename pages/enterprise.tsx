@@ -1,7 +1,6 @@
 import axios from 'axios';
-import React from 'react';
-import { FC } from 'react';
-import { useEffect, useState, } from 'react';
+import { FC, SetStateAction, useEffect, useState, } from 'react';
+
 
 import { metaData } from 'shared/constants';
 import { MainLayout } from 'widgets/MainLayout';
@@ -12,26 +11,27 @@ import "../src/features/USPSection/ui/USPSection"
 const HomePage: FC = () => {
 
   const [starCount, setStarCount] = useState(null);
-  const [forksCount, setForksCount] = useState(null);
-  useEffect(() => {
-    const fetchStarCount = async () => {
-      try {
-        const response = await axios.get(`https://api.github.com/repos/SuperDuperDB/superduperdb`);
-        const starCount = response.data.stargazers_count;
-        const forksCount = response.data.forks_count;
-        setStarCount(starCount);
-        setForksCount(forksCount);
-      } catch (error) {
-        console.error('Error fetching star count:', error);
-      }
-    };
+   const [forksCount, setForksCount] = useState(null);
+   useEffect(() => {
+      const fetchStarCount = async () => {
+         try {
+            const response = await axios.get(`https://api.github.com/repos/SuperDuperDB/superduperdb`);
+            const starCount = response.data.stargazers_count;
+            const forksCount = response.data.forks_count;
+            setStarCount(starCount);
+            setForksCount(forksCount);
+         } catch (error) {
+            console.error('Error fetching star count:', error);
+         }
+      };
 
-    fetchStarCount();
-  }, []);
+      fetchStarCount();
+   }, []);
 
   return (
     <MainLayout {...metaData.main}>
       <div data-page="enterprise">
+
         <section className="grid-parent">
           {/* <img class="grid-icon" alt="" src="../../../../images/bg-2 1.svg" /> */}
           <img
@@ -78,11 +78,11 @@ const HomePage: FC = () => {
           <div className="feature-grid">
             <div className="feature-headers">
               <div className="feature-labels">
-                <div className="div5">{starCount !== null ? starCount : 'Loading...'} ★</div>
+              <div className="div5">{starCount !== null ? starCount : 'Loading...'} ★</div>
                 <div className="github-open-source1">GitHub Open Source</div>
               </div>
               <div className="feature-labels1">
-                <div className="div6">{forksCount !== null ? forksCount : 'Loading...'}+</div>
+              <div className="div6">{forksCount !== null ? forksCount : 'Loading...'}+</div>
                 <div className="forks1">Forks</div>
               </div>
               <div className="feature-labels2">

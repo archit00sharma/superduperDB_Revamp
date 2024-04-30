@@ -1,6 +1,5 @@
 import axios from 'axios';
 import Link from 'next/link';
-import React from 'react';
 import { FC } from 'react';
 import { useEffect, useState, } from 'react';
 
