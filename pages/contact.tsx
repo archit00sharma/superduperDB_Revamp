@@ -85,7 +85,7 @@ const HomePage: FC = () => {
                                 </div>
                             </div>
                             <div className="wed-love-to">
-                            We&apos;d love to talk about how we can work together.
+                                We&apos;d love to talk about how we can work together.
                             </div>
                             <button className="contact-btn">
                                 <div className="action-label">Contact</div>
@@ -171,8 +171,8 @@ const HomePage: FC = () => {
                     </div>
                 </section>
             </div>
-            
-           <Slack/>
+
+            <Slack />
 
         </MainLayout>
     );

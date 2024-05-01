@@ -7,11 +7,9 @@ footer {
     'community'
     'toTop'
     'copyrights';
-  width: 100%;
-  padding: 0;
-  padding-top: 29px;
-  padding: 93px 2% 0;
-  width: auto;
+  padding: 93px 15px 0;
+
+
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--secondary-colors-grey);
 
@@ -44,6 +42,7 @@ footer {
 .footer__logo {
   grid-area: logo;
   padding-bottom: 24px;
+  padding-inline-start: 30px;
 
   @media (min-width: 768px) {
     padding-bottom: 40px;
@@ -69,9 +68,9 @@ footer {
   grid-area: toTop;
   display: flex;
   justify-content: flex-start;
-  height: 88px;
+  height: 60px;
   padding-top: 40px;
-  padding-bottom: 24px;
+  // padding-bottom: 24px;
 
   @media (min-width: 768px) {
     height: 104px;
@@ -107,7 +106,7 @@ footer {
 
 .footer__copyrights {
   grid-area: copyrights;
-  height: 88px;
+  height: 60px;
   padding-top: 24px;
   text-align: center;
   font-size: 12px;
@@ -117,5 +116,30 @@ footer {
 
   @media (min-width: 1024px) {
     text-align: left;
+  }
+}
+
+.send_button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: var(--accent-brand) !important;
+  color: var(--base-white);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+  background: none;
+  border: none;
+  height: 56px;
+  width: 100%;
+  max-width: 500px;
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+    height: 60px;
   }
 }

@@ -130,7 +130,6 @@ const HomePage: FC = () => {
         </section>
         <section className="value-content-wrapper">
           <div className="value-content">
-            <div className="value-content-child"></div>
             <h1 className="our-value">Our value</h1>
             <div className="value-list">
               <div className="value-pair">

@@ -6,7 +6,7 @@ import { useEffect, useState, } from 'react';
 
 import Slack from 'shared/components/Slack/ui/Slack';
 import { metaData } from 'shared/constants';
-import useGitHubRepoStats from 'shared/utils/fetGitStats';
+import useGitHubRepoStats from 'shared/utils/useGitHubRepoStats';
 import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
@@ -15,8 +15,8 @@ import "../src/features/USPSection/ui/USPSection"
 
 
 const HomePage: FC = () => {
+   
    const { starCount, forksCount } = useGitHubRepoStats();
-
    return (
       <MainLayout {...metaData.main}>
          <div data-page="home">

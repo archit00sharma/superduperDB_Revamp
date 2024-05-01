@@ -32,7 +32,7 @@ const Input: FC<InputProps> = ({
     <div className="input__container">
       <input
         value={value}
-        className={`${error ? 'input__error' : 'name-value'}`}
+        className={`${error ? 'input__error' : ''}`}
         type={type}
         placeholder={placeholder}
         data-testid={dataTestId}

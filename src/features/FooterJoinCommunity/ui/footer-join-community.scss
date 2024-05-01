@@ -18,9 +18,34 @@
     flex-direction: column;
     gap: 24px;
 
+    & h3 {
+      color: var(--base-white);
+      font-size: 18px;
+      line-height: 150%;
+
+      @media (min-width: 1024px) {
+        font-size: 24px;
+      }
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 150%;
+
+      @media (min-width: 1024px) {
+        font-size: 18px;
+      }
+    }
+
+    & h3,
+    p {
+      margin: 0;
+    }
+
     @media (min-width: 1024px) {
       gap: 16px;
     }
+
   }
 
   &__links {

@@ -4222,14 +4222,15 @@
 }
 
 
+
 .slack-logo-icon-2 {
-  width: 23.5rem;
-  height: 23.5rem;
+  width: 23rem;
+  height: 23rem;
   position: absolute;
   mix-blend-mode: darken;
   margin: 0 !important;
-  bottom: 37.5rem;
-  left: 32.875rem;
+  bottom: -31px;
+  right: -28px;
   object-fit: contain;
   z-index: 2;
 }
@@ -4299,6 +4300,7 @@
   min-width: 30rem;
   width: 738px;
   max-width: 100%;
+  position: relative;
 }
 
 .community-information,

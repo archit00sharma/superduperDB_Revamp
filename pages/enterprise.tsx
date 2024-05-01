@@ -2,7 +2,7 @@ import { FC, SetStateAction, useState } from 'react';
 
 
 import { metaData } from 'shared/constants';
-import useGitHubRepoStats from 'shared/utils/fetGitStats';
+import useGitHubRepoStats from 'shared/utils/useGitHubRepoStats';
 import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
@@ -10,8 +10,8 @@ import "../src/features/USPSection/ui/USPSection"
 
 const HomePage: FC = () => {
   const { starCount, forksCount } = useGitHubRepoStats();
-  
-return (
+
+  return (
     <MainLayout {...metaData.main}>
       <div data-page="enterprise">
 
