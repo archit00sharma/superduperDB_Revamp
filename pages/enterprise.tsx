@@ -44,7 +44,7 @@ const HomePage: FC = () => {
     <MainLayout {...metaData.main}>
       <div data-page="enterprise">
         <section className="grid-parent">
-          {/* <img class="grid-icon" alt="" src="../../../../images/bg-2 1.svg" /> */}
+          <img className="grid-icon" alt="" src="../../../../images/enterpriseGrid.svg" />
           <img
             className="vector-icon"
             loading="lazy"
@@ -254,10 +254,10 @@ const HomePage: FC = () => {
                 </div>
               </div>
             </div>
-            {/* <div class="wrapper-control">
-         <img class="control-icon1" loading="lazy" alt="" src="../../../../images/control.svg" />
+            <div className="wrapper-control">
+         <img className="control-icon1" loading="lazy" alt="" src="../../../../images/control.svg" />
       </div>
-      <img class="control-icon2" alt="" src="../../../../images/control.svg" /> */}
+      <img className="control-icon2" alt="" src="../../../../images/control.svg" />
           </div>
         </section>
         <img className="underline-1-icon" alt="" src="../../../../images/underline.svg" />

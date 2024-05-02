@@ -33,25 +33,15 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
                 <i>{item.title}</i>
               </div>
               <div className="info-icon">
-                {activeIndex === index ? (
-                  <span>
-                    <img
-                      className="fichevron-down-icon"
-                      loading="lazy"
-                      alt=""
-                      src="../../../../images/fichevrondown.svg"
-                    />
-                  </span>
-                ) : (
-                  <span>
-                    <img
-                      className="fichevron-down-icon"
-                      loading="lazy"
-                      alt=""
-                      src="../../../../images/fichevrondown.svg"
-                    />
-                  </span>
-                )}
+                <span>
+                  <img
+                    className="fichevron-down-icon"
+                    loading="lazy"
+                    alt=""
+                    style={{ transform: activeIndex === index ? 'rotate(180deg)' : 'none' }}
+                    src="../../../../images/fichevrondown.svg"
+                  />
+                </span>
               </div>
             </div>
           </div>
