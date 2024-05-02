@@ -1,6 +1,6 @@
 import { FC, SetStateAction, useState } from 'react';
 
-
+import Accordion from 'shared/components/Accordian/ui/Accordian';
 import { metaData } from 'shared/constants';
 import useGitHubRepoStats from 'shared/utils/useGitHubRepoStats';
 import { MainLayout } from 'widgets/MainLayout';
@@ -8,13 +8,41 @@ import { MainLayout } from 'widgets/MainLayout';
 import "../src/features/USPSection/ui/USPSection"
 
 
+
 const HomePage: FC = () => {
   const { starCount, forksCount } = useGitHubRepoStats();
+  
+
+  const AccordianItems = [
+    {
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, maiores laudantium incidunt, harum hic possimus minima fugiat temporibus a dolorum architecto quae nulla, eaque culpa nemo neque modi et dolorem.',
+    },
+    {
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, maiores laudantium incidunt, harum hic possimus minima fugiat temporibus a dolorum architecto quae nulla, eaque culpa nemo neque modi et dolorem.',
+    },
+    {
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, maiores laudantium incidunt, harum hic possimus minima fugiat temporibus a dolorum architecto quae nulla, eaque culpa nemo neque modi et dolorem.',
+    },
+    {
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, maiores laudantium incidunt, harum hic possimus minima fugiat temporibus a dolorum architecto quae nulla, eaque culpa nemo neque modi et dolorem.',
+    },
+    {
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, maiores laudantium incidunt, harum hic possimus minima fugiat temporibus a dolorum architecto quae nulla, eaque culpa nemo neque modi et dolorem.',
+    },
+    {
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, maiores laudantium incidunt, harum hic possimus minima fugiat temporibus a dolorum architecto quae nulla, eaque culpa nemo neque modi et dolorem.',
+    },
+  ];
 
   return (
     <MainLayout {...metaData.main}>
       <div data-page="enterprise">
-
         <section className="grid-parent">
           {/* <img class="grid-icon" alt="" src="../../../../images/bg-2 1.svg" /> */}
           <img
@@ -61,11 +89,11 @@ const HomePage: FC = () => {
           <div className="feature-grid">
             <div className="feature-headers">
               <div className="feature-labels">
-              <div className="div5">{starCount !== null ? starCount : 'Loading...'} ★</div>
+                <div className="div5">{starCount !== null ? starCount : 'Loading...'} ★</div>
                 <div className="github-open-source1">GitHub Open Source</div>
               </div>
               <div className="feature-labels1">
-              <div className="div6">{forksCount !== null ? forksCount : 'Loading...'}+</div>
+                <div className="div6">{forksCount !== null ? forksCount : 'Loading...'}+</div>
                 <div className="forks1">Forks</div>
               </div>
               <div className="feature-labels2">
@@ -240,6 +268,7 @@ const HomePage: FC = () => {
               <div className="question-header">
                 <div className="question-title">
                   <div className="title-container">
+                    <div className="why-superduperdb">Why SuperDuperDB?</div>
                     <h1 className="your-questions-answered">
                       Your questions answered
                     </h1>
@@ -283,60 +312,13 @@ const HomePage: FC = () => {
                     </button>
                   </div>
                 </div>
+
                 <div className="info-list-wrapper">
-                  <div className="info-list">
-                    <div className="frame20">
-                      <div className="info-details">
-                        <i className="lorem-ipsum-dolor6">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit?
-                        </i>
-                        <div className="info-icon">
-                          <img
-                            className="fichevron-down-icon"
-                            loading="lazy"
-                            alt=""
-                            src="../../../../images/fichevrondown.svg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="info-items" />
-                    <div className="frame21">
-                      <div className="frame22">
-                        <i className="lorem-ipsum-dolor7">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit?
-                        </i>
-                        <div className="fichevron-down-wrapper">
-                          <img
-                            className="fichevron-down-icon1"
-                            alt=""
-                            src="../../../../images/fichevrondown.svg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="info-items1" />
-                    <div className="frame23">
-                      <div className="frame24">
-                        <i className="lorem-ipsum-dolor8">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit?
-                        </i>
-                        <div className="fichevron-down-container">
-                          <img
-                            className="fichevron-down-icon2"
-                            alt=""
-                            src="../../../../images/fichevrondown.svg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="info-items2" />
-                    <i className="show-more">Show more</i>
-                  </div>
+                  <Accordion items={AccordianItems}/>
                 </div>
               </div>
               <div className="bottom-background" />
-              <div className="why-superduperdb">Why SuperDuperDB?</div>
+
             </div>
             <div className="testimonial-content-parent">
               <div className="testimonial-content">

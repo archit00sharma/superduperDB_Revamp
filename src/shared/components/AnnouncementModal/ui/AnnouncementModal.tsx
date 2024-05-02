@@ -27,7 +27,6 @@ const AnnouncementModal: React.FC<AnnouncementModalProps> = ({ stars }) => {
 
   return (
     <div>
-
       <Modal open={open} onClose={onCloseModal} center>
         <div id="modal">
           <div className='close_btn'>
