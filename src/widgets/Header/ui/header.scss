@@ -5,18 +5,15 @@
   justify-content: center;
   z-index: 3789;
   background: linear-gradient(90deg, rgba(28, 28, 40, 1) 0%, rgba(28, 28, 40, 0.9333858543417367) 100%);
-
+  max-width: 1440px;
   position: fixed;
-  left: 0;
+  // left: 0;
   top: 0;
   height: 64px;
   width: 100%;
   // background: linear-gradient(180deg, #7628f8 41px, rgba(131, 58, 180, 0) 41.5px);
   transition: transform 0.1s linear;
 
-  @media (max-width: 425px) {
-    background: none;
-  }
 
   & .pre_head {
     background: #7628f8;
@@ -101,12 +98,12 @@
   }
 
   @media (max-width: 768px) {
-    height: 5rem;
+    height: 6rem;
     // background-color: var(--background);
   }
 
   @media (max-width: 425px) {
-    height: 5rem;
+    // height: 5rem;
     padding: var(--padding-3xs);
     // background-color: var(--background);
   }
