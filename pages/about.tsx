@@ -171,7 +171,7 @@ const HomePage: FC = () => {
           </div>
         </section>
         <Team />
-        <Testimonials/>
+        <Testimonials />
         <LetsCreate />
       </div>
     </MainLayout>

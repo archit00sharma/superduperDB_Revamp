@@ -1758,24 +1758,12 @@
   }
 
   .about-us,
-  .cta,
-  .cta-wrapper {
+  .cta {
     display: flex;
     box-sizing: border-box;
   }
 
-  .cta-wrapper {
-    align-self: stretch;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 0 var(--padding-mid) 0 0;
-    max-width: 100%;
-    text-align: center;
-    font-size: var(--desktop-mono-paragraph-large-size);
-    color: var(--base-white);
-    font-family: var(--desktop-heading-large);
-  }
+
 
   .about-us {
     width: 100%;
