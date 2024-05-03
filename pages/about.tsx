@@ -1,13 +1,45 @@
 import { FC } from 'react';
 
-
+import { Team } from 'features/Team';
+import { Testimonials } from 'features/Testimonials';
+import { LetsCreate } from 'shared/components/LetsCreate';
 import { metaData } from 'shared/constants';
 import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
 
 
+
+
+interface ValuePairProps {
+  number: string;
+  title: string;
+  description: string;
+}
+
+const ValuePair: React.FC<ValuePairProps> = ({ number, title, description }) => (
+  <div className="value-pair">
+    <div className="value-pair1">
+      <div className="icon-pair"></div>
+      <b className="separator">{number}</b>
+    </div>
+    <div className="value-pair-description">
+      <div className="value-pair2">
+        <h1 className="make-it-exist">{title}</h1>
+        <div className="lorem-ipsum-dolor4">{description}</div>
+      </div>
+    </div>
+  </div>
+);
+
 const HomePage: FC = () => {
+
+  const valuePairsData = [
+    { number: "01", title: "Make it exist", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
+    { number: "02", title: "Make it simple", description: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru" },
+    { number: "03", title: "Make it useful", description: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam," },
+    { number: "04", title: "Make it worth", description: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam," }
+  ];
 
 
   return (
@@ -132,190 +164,15 @@ const HomePage: FC = () => {
           <div className="value-content">
             <h1 className="our-value">Our value</h1>
             <div className="value-list">
-              <div className="value-pair">
-                <div className="value-pair1">
-                  <div className="icon-pair"></div>
-                  <b className="separator">01</b>
-                </div>
-                <div className="value-pair-description">
-                  <div className="value-pair2">
-                    <h1 className="make-it-exist">Make it exist</h1>
-                    <div className="lorem-ipsum-dolor4">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing
-                      elit,
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="value-pair">
-                <div className="value-pair1">
-                  <div className="icon-pair"></div>
-                  <b className="separator">02</b>
-                </div>
-                <div className="value-pair-description">
-                  <div className="value-pair2">
-                    <h1 className="make-it-exist">Make it simple</h1>
-                    <div className="lorem-ipsum-dolor4">
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="value-pair">
-                <div className="value-pair1">
-                  <div className="icon-pair"></div>
-                  <b className="separator">03</b>
-                </div>
-                <div className="value-pair-description">
-                  <div className="value-pair2">
-                    <h1 className="make-it-exist">Make it useful</h1>
-                    <div className="lorem-ipsum-dolor4">
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="value-pair">
-                <div className="value-pair1">
-                  <div className="icon-pair"></div>
-                  <b className="separator">04</b>
-                </div>
-                <div className="value-pair-description">
-                  <div className="value-pair2">
-                    <h1 className="make-it-exist">Make it worth</h1>
-                    <div className="lorem-ipsum-dolor4">
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-        <section className="team-content-wrapper">
-          <div className="team-content">
-            <div className="team-title-container">
-              <h1 className="get-to-know">Get to know us</h1>
-            </div>
-            <div className="team-description">
-              <div className="superduperdb-is-a">
-                SuperDuperDB is a 100% remote team. We believe that creative
-                collaboration can happen anywhere and want our team to work where
-                they feel most comfortable and inspired.
-              </div>
-            </div>
-            <div className="team-member-list">
-              <img className="team-member-set" loading="lazy" alt="" src="../../../../images/user.svg" />
-
-              <img className="team-member-set1" loading="lazy" alt="" src="../../../../images/user.svg" />
-
-              <img className="team-member-set2" loading="lazy" alt="" src="../../../../images/user.svg" />
-
-              <img className="team-member-set3" loading="lazy" alt="" src="../../../../images/user.svg" />
-
-              <img className="team-member-set4" loading="lazy" alt="" src="../../../../images/user.svg" />
-
-              <img className="team-member-set5" alt="" src="../../../../images/user.svg" />
-            </div>
-            <div className="staff-grid-container">
-              <div className="staff-grid">
-                <img className="staff-icons" loading="lazy" alt="" src="../../../../images/user.svg" />
-
-                <img className="staff-icons1" loading="lazy" alt="" src="../../../../images/user.svg" />
-
-                <img className="staff-icons2" loading="lazy" alt="" src="../../../../images/user.svg" />
-
-                <img className="staff-icons3" loading="lazy" alt="" src="../../../../images/user.svg" />
-
-                <img className="staff-icons4" loading="lazy" alt="" src="../../../../images/user.svg" />
-              </div>
+              {valuePairsData.map((pair, index) => (
+                <ValuePair key={index} {...pair} />
+              ))}
             </div>
           </div>
         </section>
-        <section className="testimonial-container-wrapper">
-          <div className="testimonial-container">
-            <div className="testimonial-header">
-              <h1 className="testimonials">Testimonials</h1>
-            </div>
-            <div className="testimonial-cards">
-              <div className="quote-cards">
-                <div className="quote-cards-child"></div>
-                <div className="ut-enim-ad-minim-veniam-quis-wrapper">
-                  <div className="ut-enim-ad">
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                    irure dolor in reprehenderit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt
-                    mollit anim id est laborum.
-                  </div>
-                </div>
-                <div className="author-info">
-                  <div className="author-details">
-                    <img className="author-photos-icon" loading="lazy" alt="" src="../../../../images/testuser1.svg" />
-
-                    <div className="author-data">
-                      <div className="author-names">
-                        <h3 className="rodrigo-duarte">Rodrigo Duarte</h3>
-                        <div className="product-owner">Product Owner</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="company-logo">
-                    <img className="company-logo-child" loading="lazy" alt="" src="../../../../images/rating.svg" />
-                  </div>
-                </div>
-              </div>
-              <div className="quote-cards1">
-                <div className="quote-cards-item"></div>
-                <div className="ut-enim-ad-minim-veniam-quis-container">
-                  <div className="ut-enim-ad1">
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                    irure dolor in reprehenderit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt
-                    mollit anim id est laborum.
-                  </div>
-                </div>
-                <div className="frame-group">
-                  <div className="ellipse-container">
-                    <img className="frame-inner" loading="lazy" alt="" src="../../../../images/testuser2.svg" />
-
-                    <div className="frame-container">
-                      <div className="ivone-josan-parent">
-                        <h3 className="ivone-josan">Ivone Josan</h3>
-                        <div className="senior-engineer">Senior Engineer</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="frame-div">
-                    <img className="group-icon" loading="lazy" alt="" src="../../../../images/rating.svg" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="cta-wrapper">
-          <div className="cta">
-            <div className="c-t-a-wrapper">
-              <div className="frame">
-                <div className="frame1">
-                  <i className="have-a-project"> </i>
-                  <h1 className="lets-create-something">
-                    Let’s create something awesome.
-                  </h1>
-                </div>
-                <button className="button4">
-                  <div className="button5">Get Started</div>
-                  <img className="fiarrow-right-icon1" alt="" src="../../../../images/getstartedarrow-right.svg" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Team />
+        <Testimonials/>
+        <LetsCreate />
       </div>
     </MainLayout>
   );

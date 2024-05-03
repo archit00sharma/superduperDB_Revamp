@@ -1384,6 +1384,10 @@
     justify-content: flex-start;
   }
 
+  .author-name {
+    margin: 0;
+  }
+
   .author-data {
     flex: 1;
     justify-content: flex-end;
@@ -11764,6 +11768,7 @@
     line-height: 1.5rem;
     color: var(--color-lightslategray);
     z-index: 2;
+    font-size: var(--desktop-mono-paragraph-medium-size);
   }
 
   .action-label {
@@ -11817,8 +11822,10 @@
     justify-content: flex-start;
     padding: var(--padding-11xl) var(--padding-12xl);
     gap: var(--gap-5xl);
-    min-width: 16.813rem;
+    min-width: 22.4375rem;
     z-index: 1;
+    align-self: stretch;
+    border: 1px solid var(--color-gray-100);
   }
 
   .option-structure-item {

@@ -7,7 +7,68 @@ import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
 
+const engagementOptions = [
+    {
+        icon: "../../../../images/store.svg",
+        title: "Enterprise",
+        description: "We'd love to talk about how we can work together.",
+        actionLabel: "Contact"
+    },
+    {
+        icon: "../../../../images/user-headset.svg",
+        title: "Help & Support",
+        description: "Get in touch and let us know how we can help.",
+        actionLabel: "Slack"
+    },
+    {
+        icon: "../../../../images/newspaper.svg",
+        title: "Media & Press",
+        description: "Get SuperDuperDB news, company info, and media resources.",
+        actionLabel: "E-mail"
+    }
+];
 
+interface EngagementOptionProps {
+    icon: string;
+    title: string;
+    description: string;
+    actionLabel: string;
+}
+
+const EngagementOption: React.FC<EngagementOptionProps> = ({ icon, title, description, actionLabel }) => (
+    <div className="option-structure">
+        <div className="option-alignment-parent">
+            <button className="option-alignment">
+                <div className="option-details">
+                    <div className="option-icons"></div>
+                    <img className="store-1-icon" alt="" src={icon} />
+                </div>
+            </button>
+            <div className="option-descriptions">
+                <h3 className="enterprise">{title}</h3>
+            </div>
+        </div>
+        <div className="wed-love-to">{description}</div>
+        <button className="contact-btn">
+            <div className="action-label">{actionLabel}</div>
+            <img className="" alt="" src="../../../../images/arrow-right.svg" />
+        </button>
+    </div>
+);
+
+const EngagementOptions = () => (
+    <div className="engagement-options">
+        {engagementOptions.map((option, index) => (
+            <EngagementOption
+                key={index}
+                icon={option.icon}
+                title={option.title}
+                description={option.description}
+                actionLabel={option.actionLabel}
+            />
+        ))}
+    </div>
+);
 
 
 const HomePage: FC = () => {
@@ -30,7 +91,6 @@ const HomePage: FC = () => {
                             </div>
                         </div>
                         <div className="form-container">
-                            <div className="form-container-child"></div>
                             <div className="form-structure">
                                 <div className="name-input">
                                     <b className="your-name">YOUR NAME</b>
@@ -63,78 +123,14 @@ const HomePage: FC = () => {
                     </div>
                 </section>
                 <section className="rectangle-parent">
-                    <div className="frame-child"></div>
                     <div className="engagement-header">
                         <h1 className="contact-us">Contact us</h1>
                         <div className="get-in-touch1">
                             Get in touch and let us know how we can help.
                         </div>
                     </div>
-                    <div className="engagement-options">
-                        <div className="option-structure">
-                            <div className="option-structure-child"></div>
-                            <div className="option-alignment-parent">
-                                <button className="option-alignment">
-                                    <div className="option-details">
-                                        <div className="option-icons"></div>
-                                        <img className="store-1-icon" alt="" src="../../../../images/store.svg" />
-                                    </div>
-                                </button>
-                                <div className="option-descriptions">
-                                    <h3 className="enterprise">Enterprise</h3>
-                                </div>
-                            </div>
-                            <div className="wed-love-to">
-                                We&apos;d love to talk about how we can work together.
-                            </div>
-                            <button className="contact-btn">
-                                <div className="action-label">Contact</div>
-                                <img className="" alt="" src="../../../../images/arrow-right.svg" />
-                            </button>
-                        </div>
-                        <div className="option-structure1">
-                            <div className="option-structure-item"></div>
-                            <div className="frame-parent">
-                                <button className="frame-wrapper">
-                                    <div className="ellipse-parent">
-                                        <div className="frame-item"></div>
-                                        <img className="user-headset-1-icon" alt="" src="../../../../images/user-headset.svg" />
-                                    </div>
-                                </button>
-                                <div className="help-support-wrapper">
-                                    <h3 className="help-support">Help & Support</h3>
-                                </div>
-                            </div>
-                            <div className="get-in-touch2">
-                                Get in touch and let us know how we can help.
-                            </div>
-                            <button className="contact-btn">
-                                <div className="action-label">Slack</div>
-                                <img className="" alt="" src="../../../../images/arrow-right.svg" />
-                            </button>
-                        </div>
-                        <div className="option-structure2">
-                            <div className="option-structure-inner"></div>
-                            <div className="frame-group">
-                                <button className="frame-container">
-                                    <div className="ellipse-group">
-                                        <div className="frame-inner"></div>
-                                        <img className="newspaper-1-icon" alt="" src="../../../../images/newspaper.svg" />
-                                    </div>
-                                </button>
-                                <div className="media-press-wrapper">
-                                    <h3 className="media-press">Media & Press</h3>
-                                </div>
-                            </div>
-                            <div className="get-superduperdb-news">
-                                Get SuperDuperDB news, company info, and media resources.
-                            </div>
-                            <button className="contact-btn">
-                                <div className="action-label">E-mail</div>
-                                <img className="" alt="" src="../../../../images/arrow-right.svg" />
-                            </button>
-                        </div>
-                    </div>
+
+                    <EngagementOptions />
                 </section>
                 <section className="subscription">
                     <div className="subscription-content">

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { useEffect, useState, } from 'react';
 
-
+import { LetsCreate } from 'shared/components/LetsCreate';
 import Slack from 'shared/components/Slack/ui/Slack';
 import { metaData } from 'shared/constants';
 import useGitHubRepoStats from 'shared/utils/useGitHubRepoStats';
@@ -16,9 +16,9 @@ import { Button } from 'shared/components/Button';
 
 
 
+
 const HomePage: FC = () => {
   const { starCount, forksCount } = useGitHubRepoStats();
-  
   const databases = [
     { src: '../../../../images/2Xpostgresql.svg' },
     { src: '../../../../images/2Xsqlite.svg' },
@@ -333,7 +333,7 @@ const HomePage: FC = () => {
           </div>
         </section>
         <div className="d-flex" >
-          {transforms.map((transform,index) => (
+          {transforms.map((transform, index) => (
             <div key={index} className="rectangle-parent">
               <div className="transform-header">
                 <div className="deployment-icon">
@@ -349,26 +349,7 @@ const HomePage: FC = () => {
             </div>
           ))}
         </div>
-        <section className="cta">
-          <div className="c-t-a-container">
-            <div className="c-t-a-content">
-              <div className="frame11">
-                <i className="have-a-project"> </i>
-                <h1 className="lets-create-something">
-                  Let’s create something awesome.
-                </h1>
-              </div>
-              <button className="button6">
-                <div className="button7">Get Started</div>
-                <img
-                  className="fiarrow-right-icon3"
-                  alt=""
-                  src="../../../../images/accent-arrow.svg"
-                />
-              </button>
-            </div>
-          </div>
-        </section>
+        <LetsCreate />
         <div className="footer-background">
           <img className="bg-2-1-icon1" alt="" src="../../../../images/bg-bottom.svg" />
         </div>

@@ -1,0 +1,140 @@
+.cta-wrapper {
+   display: flex;
+   box-sizing: border-box;
+   align-self: stretch;
+   flex-direction: row;
+   align-items: flex-start;
+   justify-content: flex-end;
+   max-width: 100%;
+   text-align: center;
+   font-size: var(--desktop-mono-paragraph-large-size);
+   color: var(--base-white);
+   font-family: var(--desktop-heading-large);
+}
+
+.cta {
+   width: 90rem;
+   overflow: hidden;
+   flex-shrink: 0;
+   padding: var(--padding-69xl-5) var(--padding-xl) 0;
+   max-width: 100%;
+   display: flex;
+   box-sizing: border-box;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   @media screen and (max-width: 450px) {
+
+      padding-top: var(--padding-39xl);
+      padding-bottom: var(--padding-39xl);
+      box-sizing: border-box;
+
+   }
+}
+
+.c-t-a-wrapper {
+   width: 76.5rem;
+   border-radius: var(--br-base);
+   background-color: var(--back-block);
+   box-shadow: var(--effect);
+   border: 1px solid var(--base-white);
+   box-sizing: border-box;
+   display: flex;
+   padding: var(--padding-19xl) 0;
+   max-width: 100%;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+.frame {
+   align-self: stretch;
+   display: flex;
+   justify-content: flex-start;
+   gap: var(--gap-21xl);
+   max-width: 100%;
+   flex-direction: column;
+   align-items: center;
+}
+
+.frame1 {
+   align-self: stretch;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 0 var(--padding-xl);
+   box-sizing: border-box;
+   gap: var(--gap-5xs);
+   max-width: 100%;
+}
+
+.lets-create-something {
+   margin: 0;
+   position: relative;
+   font-size: var(--desktop-heading-large-size);
+   letter-spacing: -0.02em;
+   line-height: 3rem;
+   font-weight: 700;
+   font-family: inherit;
+   display: inline-block;
+   max-width: 100%;
+
+   @media screen and (max-width: 800px) {
+
+      font-size: var(--font-size-13xl);
+      line-height: 2.375rem;
+
+   }
+
+   @media screen and (max-width: 450px) {
+      font-size: var(--font-size-5xl);
+      line-height: 1.813rem;
+   }
+}
+
+
+.button-wrapper {
+   cursor: pointer;
+   border: 0;
+   padding: var(--padding-xs) var(--padding-base);
+   background-color: var(--base-white) !important;
+   width: 10.25rem;
+   border-radius: 7.29px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   box-sizing: border-box;
+   gap: var(--gap-xs);
+   white-space: nowrap;
+}
+
+.button-wrapper:hover {
+   background-color: var(--color-gainsboro-100) !important;
+}
+
+
+.button-text {
+   flex: 1;
+   position: relative;
+   font-size: var(--desktop-mono-paragraph-medium-size);
+   letter-spacing: -0.01em;
+   line-height: 1.5rem;
+   font-weight: 500;
+   font-family: var(--desktop-heading-large);
+   color: var(--accent-brand);
+   text-align: center;
+   display: inline-block;
+   min-width: 6.5rem;
+}
+
+.fiarrow-right-icon {
+   height: 1rem;
+   width: 1rem;
+   position: relative;
+   overflow: hidden;
+   flex-shrink: 0;
+}
