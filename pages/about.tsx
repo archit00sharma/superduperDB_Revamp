@@ -7,15 +7,11 @@ import { metaData } from 'shared/constants';
 import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
-
-
-
-
 interface ValuePairProps {
   number: string;
   title: string;
   description: string;
-}
+};
 
 const ValuePair: React.FC<ValuePairProps> = ({ number, title, description }) => (
   <div className="value-pair">
@@ -33,6 +29,8 @@ const ValuePair: React.FC<ValuePairProps> = ({ number, title, description }) => 
 );
 
 const HomePage: FC = () => {
+
+
 
   const valuePairsData = [
     { number: "01", title: "Make it exist", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
@@ -55,6 +53,8 @@ const HomePage: FC = () => {
                     <br />
                     <span className='about-subtext'>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
                   </div>
+
+
 
                   <div className="call-to-action">
                     <button className="button2">

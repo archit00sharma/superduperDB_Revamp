@@ -1,4 +1,3 @@
-import axios from 'axios';
 import Link from 'next/link';
 import { FC } from 'react';
 import { useEffect, useState, } from 'react';
@@ -13,12 +12,9 @@ import "../src/features/USPSection/ui/USPSection"
 
 import { Button } from 'shared/components/Button';
 
-
-
-
-
 const HomePage: FC = () => {
   const { starCount, forksCount } = useGitHubRepoStats();
+  
   const databases = [
     { src: '../../../../images/2Xpostgresql.svg' },
     { src: '../../../../images/2Xsqlite.svg' },
@@ -39,7 +35,6 @@ const HomePage: FC = () => {
     { src: '../../../../images/2Xhuggingface-transformers.svg' },
     { src: '../../../../images/2Xhuggingface-transformers.svg' }
   ];
-
   const transforms = [
     {
       imagePath: '../../../../images/fi_git-pull-request.svg',
@@ -334,7 +329,7 @@ const HomePage: FC = () => {
         </section>
         <div className="d-flex" >
           {transforms.map((transform, index) => (
-            <div key={index} className="rectangle-parent">
+            <div><div key={index} className="rectangle-parent">
               <div className="transform-header">
                 <div className="deployment-icon">
                   <img
@@ -346,7 +341,7 @@ const HomePage: FC = () => {
                 <h2 className="transform-title" dangerouslySetInnerHTML={{ __html: transform.title }}></h2>
               </div>
               <div className="transform-text">{transform.description}</div>
-            </div>
+            </div></div>
           ))}
         </div>
         <LetsCreate />

@@ -1,4 +1,7 @@
 import { FC, SetStateAction, useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 
 import Accordion from 'shared/components/Accordian/ui/Accordian';
 import { metaData } from 'shared/constants';
@@ -7,12 +10,111 @@ import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
 
+interface CustomCardProps {
+  title: string;
+  description: string;
+  imageSrc: string;
+  name?: string; // Optional prop
+};
 
+const CustomCard: React.FC<CustomCardProps> = ({ title, description, imageSrc, name }) => {
+  return (
+    <div className="card7">
+      <div className="image-card7">
+        <div className="main-card7">
+          <div className="image-block">
+            <div className="content9">
+              <div className="image">
+                <img src={imageSrc} alt="Card" />
+              </div>
+            </div>
+            <div className="sectionsdivider" />
+          </div>
+          <div className="content10">
+            <b className="card-title1">{title}</b>
+            <i className="description1">{description}</i>
+            <div className="frame17">
+              <img
+                className="frame-icon"
+                alt=""
+                src="../../../../images/Rectangle.svg"
+              />
+              <div className="chaos-labs-wrapper">
+                <div className="chaos-labs1">{name}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const cardData = [
+  {
+    title: 'Card Title 1',
+    description: 'Description for card 1',
+    imageSrc: '../../../../images/image1.jpg',
+    name: "Chaos Labs"
+  },
+  {
+    title: 'Card Title 2',
+    description: 'Description for card 2',
+    imageSrc: '../../../../images/image2.jpg',
+    name: "Chaos Labs"
+  },
+  {
+    title: 'Card Title 3',
+    description: 'Description for card 2',
+    imageSrc: '../../../../images/image2.jpg',
+    name: "Chaos Labs"
+  },
+  {
+    title: 'Card Title 4',
+    description: 'Description for card 2',
+    imageSrc: '../../../../images/image2.jpg',
+    name: "Chaos Labs"
+  },
+
+];
 
 const HomePage: FC = () => {
-  const { starCount, forksCount } = useGitHubRepoStats();
-  
 
+  const settings = {
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   const AccordianItems = [
     {
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
@@ -39,6 +141,7 @@ const HomePage: FC = () => {
       content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, maiores laudantium incidunt, harum hic possimus minima fugiat temporibus a dolorum architecto quae nulla, eaque culpa nemo neque modi et dolorem.',
     },
   ];
+  const { starCount, forksCount } = useGitHubRepoStats();
 
   return (
     <MainLayout {...metaData.main}>
@@ -84,7 +187,6 @@ const HomePage: FC = () => {
             </div>
           </div>
         </section>
-        <div className="rectangle" />
         <div className="feature-grid-wrapper">
           <div className="feature-grid">
             <div className="feature-headers">
@@ -138,126 +240,20 @@ const HomePage: FC = () => {
           <div className="frame16">
             <img className="grid-icon1" alt="" src="../../../../images/Grid.svg" />
             <div className="project-cards">
-              <div className="card6">
-                <div className="image-card6">
-                  <div className="main-card6">
-                    <textarea
-                      className="image-block"
-                      rows={13}
-                      cols={20}
-                      defaultValue={"                  "}
+              <section className='slider-wrapper'>
+                <Slider {...settings}>
+                  {cardData.map((card, index) => (
+                    <CustomCard
+                      key={index}
+                      title={card.title}
+                      description={card.description}
+                      imageSrc={card.imageSrc}
+                      name={card.name}
                     />
-                    <div className="content8">
-                      <b className="card-title">Card title</b>
-                      <i className="description">
-                        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis
-                        cillum dolor.
-                      </i>
-                      <div className="card-footer">
-                        <img
-                          className="footer-left-icon"
-                          loading="lazy"
-                          alt=""
-                          src="../../../../images/Rectangle.svg"
-                        />
-                        <div className="footer-right">
-                          <div className="chaos-labs">Chaos Labs</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="card7">
-                <div className="image-card7">
-                  <div className="main-card7">
-                    <div className="image-block1">
-                      <div className="content9">
-                        <div className="image" />
-                      </div>
-                      <div className="sectionsdivider" />
-                    </div>
-                    <div className="content10">
-                      <b className="card-title1">Card title</b>
-                      <i className="description1">
-                        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis
-                        cillum dolor.
-                      </i>
-                      <div className="frame17">
-                        <img
-                          className="frame-icon"
-                          alt=""
-                          src="../../../../images/Rectangle.svg"
-                        />
-                        <div className="chaos-labs-wrapper">
-                          <div className="chaos-labs1">Chaos Labs</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="card8">
-                <div className="image-card8">
-                  <div className="main-card8">
-                    <div className="image-block2">
-                      <div className="content11">
-                        <div className="image1" />
-                      </div>
-                      <div className="sectionsdivider1" />
-                    </div>
-                    <div className="content12">
-                      <b className="card-title2">Card title</b>
-                      <i className="description2">
-                        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis
-                        cillum dolor.
-                      </i>
-                      <div className="frame18">
-                        <img
-                          className="frame-icon1"
-                          alt=""
-                          src="../../../../images/Rectangle.svg"
-                        />
-                        <div className="chaos-labs-container">
-                          <div className="chaos-labs2">Chaos Labs</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="card9">
-                <div className="image-card9">
-                  <div className="main-card9">
-                    <div className="image-block3">
-                      <div className="content13">
-                        <div className="image2" />
-                      </div>
-                      <div className="sectionsdivider2" />
-                    </div>
-                    <div className="content14">
-                      <b className="card-title3">Card title</b>
-                      <i className="description3">
-                        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis
-                        cillum dolor.
-                      </i>
-                      <div className="frame19">
-                        <img
-                          className="frame-icon2"
-                          alt=""
-                          src="../../../../images/Rectangle.svg"
-                        />
-                        <div className="chaos-labs3">Chaos Labs</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                  ))}
+                </Slider>
+              </section>
             </div>
-            <div className="wrapper-control">
-         <img className="control-icon1" loading="lazy" alt="" src="../../../../images/control.svg" />
-      </div>
-      <img className="control-icon2" alt="" src="../../../../images/control.svg" />
           </div>
         </section>
         <img className="underline-1-icon" alt="" src="../../../../images/underline.svg" />
@@ -314,7 +310,7 @@ const HomePage: FC = () => {
                 </div>
 
                 <div className="info-list-wrapper">
-                  <Accordion items={AccordianItems}/>
+                  <Accordion items={AccordianItems} />
                 </div>
               </div>
               <div className="bottom-background" />
