@@ -14,7 +14,7 @@ import { Button } from 'shared/components/Button';
 
 const HomePage: FC = () => {
   const { starCount, forksCount } = useGitHubRepoStats();
-  
+
   const databases = [
     { src: '../../../../images/2Xpostgresql.svg' },
     { src: '../../../../images/2Xsqlite.svg' },
@@ -329,7 +329,7 @@ const HomePage: FC = () => {
         </section>
         <div className="d-flex" >
           {transforms.map((transform, index) => (
-            <div><div key={index} className="rectangle-parent">
+            <div key={index}><div className="rectangle-parent">
               <div className="transform-header">
                 <div className="deployment-icon">
                   <img

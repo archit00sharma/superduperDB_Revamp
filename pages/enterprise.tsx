@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
+import { ImageAccordion } from 'features/ImageAccordian';
 import Accordion from 'shared/components/Accordian/ui/Accordian';
 import { metaData } from 'shared/constants';
 import useGitHubRepoStats from 'shared/utils/useGitHubRepoStats';
@@ -10,39 +11,29 @@ import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
 
+
 interface CustomCardProps {
   title: string;
   description: string;
   imageSrc: string;
-  name?: string; // Optional prop
+  name?: string;
 };
 
 const CustomCard: React.FC<CustomCardProps> = ({ title, description, imageSrc, name }) => {
   return (
-    <div className="card7">
-      <div className="image-card7">
-        <div className="main-card7">
-          <div className="image-block">
-            <div className="content9">
-              <div className="image">
-                <img src={imageSrc} alt="Card" />
-              </div>
-            </div>
-            <div className="sectionsdivider" />
-          </div>
-          <div className="content10">
-            <b className="card-title1">{title}</b>
-            <i className="description1">{description}</i>
-            <div className="frame17">
-              <img
-                className="frame-icon"
-                alt=""
-                src="../../../../images/Rectangle.svg"
-              />
-              <div className="chaos-labs-wrapper">
-                <div className="chaos-labs1">{name}</div>
-              </div>
-            </div>
+    <div className="slider-card">
+      <img src={imageSrc} alt="" />
+      <div className="content10">
+        <b className="card-title1">{title}</b>
+        <i className="description1">{description}</i>
+        <div className="frame17">
+          <img
+            className="frame-icon"
+            alt=""
+            src="../../../../images/Rectangle.svg"
+          />
+          <div className="chaos-labs-wrapper">
+            <div className="chaos-labs1">{name}</div>
           </div>
         </div>
       </div>
@@ -52,29 +43,42 @@ const CustomCard: React.FC<CustomCardProps> = ({ title, description, imageSrc, n
 
 const cardData = [
   {
-    title: 'Card Title 1',
-    description: 'Description for card 1',
-    imageSrc: '../../../../images/image1.jpg',
+    title: 'Card title',
+    description: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis cillum dolor.',
+    imageSrc: '../../../../images/Image_Block.svg',
     name: "Chaos Labs"
   },
   {
-    title: 'Card Title 2',
-    description: 'Description for card 2',
-    imageSrc: '../../../../images/image2.jpg',
+    title: 'Card title',
+    description: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis cillum dolor.',
+    imageSrc: '../../../../images/Image_Block1.svg',
     name: "Chaos Labs"
   },
   {
-    title: 'Card Title 3',
-    description: 'Description for card 2',
-    imageSrc: '../../../../images/image2.jpg',
+    title: 'Card title',
+    description: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis cillum dolor.',
+    imageSrc: '../../../../images/bell.svg',
     name: "Chaos Labs"
   },
   {
-    title: 'Card Title 4',
-    description: 'Description for card 2',
-    imageSrc: '../../../../images/image2.jpg',
+    title: 'Card title',
+    description: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis cillum dolor.',
+    imageSrc: '../../../../images/Image_Block.svg',
     name: "Chaos Labs"
   },
+  {
+    title: 'Card title',
+    description: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis cillum dolor.',
+    imageSrc: '../../../../images/Image_Block1.svg',
+    name: "Chaos Labs"
+  },
+  {
+    title: 'Card title',
+    description: 'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis cillum dolor.',
+    imageSrc: '../../../../images/bell.svg',
+    name: "Chaos Labs"
+  },
+
 
 ];
 
@@ -84,36 +88,36 @@ const HomePage: FC = () => {
     // dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     // autoplay: true,
     // autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 3,
+    //       slidesToScroll: 1,
+    //       infinite: true,
+    //       dots: true,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 768,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 1,
+    //       initialSlide: 2,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       slidesToShow: 4,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    // ],
   };
   const AccordianItems = [
     {
@@ -139,6 +143,54 @@ const HomePage: FC = () => {
     {
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
       content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, maiores laudantium incidunt, harum hic possimus minima fugiat temporibus a dolorum architecto quae nulla, eaque culpa nemo neque modi et dolorem.',
+    },
+  ];
+
+  const listItems = [
+    {
+      title: 'Install any model and API',
+      image: '../../../../images/bell.svg',
+      content: 'Install any model and API on your database to feed them your data effortlessly'
+    },
+    {
+      title: 'Forget building pipelines',
+      image: '../../../../images/Image_Block1.svg',
+      content: 'Forget building pipelines and simply define your model input and training data with database queries.'
+    },
+    {
+      title: 'AI outputs stored in your db',
+      image: '../../../../images/Image_Block.svg',
+      content: 'AI outputs stored in your db so that they are organized and available for downstream applications and your teams.'
+    },
+    {
+      title: 'Enable & Manage Vector Search',
+      image: '../../../../images/bell.svg',
+      content: 'Deploy your favorite models and APIs side-by-side to generate multi-modal vector embeddings of your data, storing them in your database automatically. Easily create vector indexes for your different applications.'
+    },
+    {
+      title: 'Streaming inference',
+      image: '../../../../images/Image_Block1.svg',
+      content: 'Real time processing of new incoming data points keeping your AI workflows up-to-date instantly and immediately, always.'
+    },
+    {
+      title: 'Model Self-Hosting',
+      image: '../../../../images/Image_Block.svg',
+      content: 'Install and host/deploy/run any Pytorch, Sklearn, HF transformer model with one command. Switch from an API like OpenAI to an internal model with another one'
+    },
+    {
+      title: 'Model training/fine-tuning',
+      image: '../../../../images/Image_Block1.svg',
+      content: 'Model training/fine-tuning on your data without. , ie trigger retraining after 1000x new entries in the defined collection or table/the database'
+    },
+    {
+      title: 'Compatible and open',
+      image: '../../../../images/Image_Block.svg',
+      content: 'Leverage any Python package and major AI frameworks, tools and libraries to enhance your applications'
+    },
+    {
+      title: 'Support of any data type',
+      image: '../../../../images/Image_Block1.svg',
+      content: 'Store, retrieve and work with images, video, audio in your database, and any type which can be encoded as bytes in Python.'
     },
   ];
   const { starCount, forksCount } = useGitHubRepoStats();
@@ -205,14 +257,11 @@ const HomePage: FC = () => {
             </div>
           </div>
         </div>
+        <ImageAccordion listItems={listItems} />
+
         <section className="new-grants-parent">
           <div className="new-grants">
-            <img
-              className="overview-1-icon"
-              loading="lazy"
-              alt=""
-              src="../../../../images/NewGrants.svg"
-            />
+            <iframe className='youtube-frame' src="https://www.youtube.com/embed/FxJs7pbHj3Q?si=cts4IY8eT5d4vD2u" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </div>
           <div className="grants-content">
             <div className="want-to-see-what-you-can-do-parent">
@@ -230,17 +279,19 @@ const HomePage: FC = () => {
                   />
                 </div>
                 <div className="view-more">
-                  <i className="view-all">View all</i>
+                  View all
                 </div>
               </div>
             </div>
           </div>
         </section>
+
         <section className="frame-wrapper4">
           <div className="frame16">
             <img className="grid-icon1" alt="" src="../../../../images/Grid.svg" />
             <div className="project-cards">
               <section className='slider-wrapper'>
+
                 <Slider {...settings}>
                   {cardData.map((card, index) => (
                     <CustomCard
@@ -256,7 +307,9 @@ const HomePage: FC = () => {
             </div>
           </div>
         </section>
+
         <img className="underline-1-icon" alt="" src="../../../../images/underline.svg" />
+
         <section className="f-a-q-content-wrapper">
           <div className="f-a-q-content">
             <div className="f-a-q-background" />
@@ -337,14 +390,15 @@ const HomePage: FC = () => {
                       />
                       <div className="quote-details">
                         <div className="quote-description">
+                          <h1 className="superduperdb-enterprise">
+                            SuperDuperDB Enterprise
+                          </h1>
                           <b className="if-you-are">
                             If you are a large company or team looking to build with
                             SuperDuperDB. Send us a message.
                           </b>
                         </div>
-                        <h1 className="superduperdb-enterprise">
-                          SuperDuperDB Enterprise
-                        </h1>
+
                       </div>
                     </div>
                     <img
@@ -368,9 +422,9 @@ const HomePage: FC = () => {
             </div>
           </div>
         </section>
-      </div>
+      </div >
 
-    </MainLayout>
+    </MainLayout >
   );
 };
 

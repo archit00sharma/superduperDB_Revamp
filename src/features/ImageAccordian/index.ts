@@ -1,0 +1,1 @@
+export { default as ImageAccordion } from './ui/ImageAccordion';

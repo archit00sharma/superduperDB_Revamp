@@ -172,3 +172,44 @@
    z-index: 12;
 
 }
+
+
+// accordian
+.toolkit-wrapper {
+   padding: var(--padding-61xl) var(--padding-13xl);
+   display: flex;
+   margin: auto;
+   max-width: 1240px;
+   gap: var(--padding-13xl);
+   color: var(--base-white);
+
+   & .left-side {
+      min-height: 500px;
+      width: 70%;
+
+      & img {
+         width: 100%;
+      }
+   }
+
+   & .right-side {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-base);
+      width: 25%;
+
+      div {
+         padding: var(--padding-5xs) var(--padding-base);
+         background-color: var(--color-gray-100);
+         border-radius: .5rem;
+         width: 100%;
+         cursor: pointer;
+         font-weight: 900;
+
+         & p {
+            font-size: var(--font-size-xs);
+            font-weight: 300;
+         }
+      }
+   }
+}
