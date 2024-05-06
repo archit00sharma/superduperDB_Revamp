@@ -10,7 +10,6 @@ import { MainLayout } from 'widgets/MainLayout';
 
 import "../src/features/USPSection/ui/USPSection"
 
-import { Button } from 'shared/components/Button';
 
 const HomePage: FC = () => {
   const { starCount, forksCount } = useGitHubRepoStats();

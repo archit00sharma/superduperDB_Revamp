@@ -7,6 +7,7 @@ import { links } from 'shared/constants';
 import ApacheIcon from 'shared/icons/apache.svg';
 import PythonIcon from 'shared/icons/python-icon.svg';
 import { handleExternalNavigation } from 'shared/utils';
+
 import './usp-section.scss';
 import { animationSequence, uspParagraph } from '../model/sectionData'
 
