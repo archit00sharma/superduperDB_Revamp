@@ -93,6 +93,8 @@ const MainLayout: FC<MainLayoutProps> = ({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7628f8" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" />
         <meta name="apple-mobile-web-app-title" content="SuperDuperDB" />
         <meta name="application-name" content="SuperDuperDB" />
         <meta name="msapplication-TileColor" content="#da532c" />
@@ -117,7 +119,7 @@ const MainLayout: FC<MainLayoutProps> = ({
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={fullURL} />
 
-      </Head>
+      </Head >
 
       <div className="main-layout">
         <div className="main-layout__container">

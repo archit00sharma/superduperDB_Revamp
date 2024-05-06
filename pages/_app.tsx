@@ -1,10 +1,13 @@
 import { AppProps } from 'next/app';
-import { Roboto_Mono, Space_Grotesk } from 'next/font/google';
+import { Roboto_Mono, Space_Mono } from 'next/font/google';
 
 import 'app/styles/index.scss';
 
 const robotoMono = Roboto_Mono({ subsets: ['latin'] });
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
+const spaceMono = Space_Mono({
+  subsets: ['latin'],
+  weight: '400'
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -15,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }
 
         .grotesk {
-          font-family: ${spaceGrotesk.style.fontFamily};
+          font-family: ${spaceMono.style.fontFamily};
         }
       `}</style>
       <Component {...pageProps} />
