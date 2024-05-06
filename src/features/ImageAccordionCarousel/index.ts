@@ -1,0 +1,1 @@
+export { default as ImageAccordionCarousel } from './ui/ImageAccordionCarousel';

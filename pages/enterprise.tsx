@@ -1,9 +1,10 @@
-import { FC, SetStateAction, useState } from 'react';
+import { FC, SetStateAction, useRef, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
 import { ImageAccordion } from 'features/ImageAccordian';
+import { ImageAccordionCarousel } from 'features/ImageAccordionCarousel';
 import Accordion from 'shared/components/Accordian/ui/Accordian';
 import { metaData } from 'shared/constants';
 import useGitHubRepoStats from 'shared/utils/useGitHubRepoStats';
@@ -145,7 +146,6 @@ const HomePage: FC = () => {
       content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, maiores laudantium incidunt, harum hic possimus minima fugiat temporibus a dolorum architecto quae nulla, eaque culpa nemo neque modi et dolorem.',
     },
   ];
-
   const listItems = [
     {
       title: 'Install any model and API',
@@ -179,7 +179,7 @@ const HomePage: FC = () => {
     },
     {
       title: 'Model training/fine-tuning',
-      image: '../../../../images/Image_Block1.svg',
+      image: '../../../../images/Image_Block.svg',
       content: 'Model training/fine-tuning on your data without. , ie trigger retraining after 1000x new entries in the defined collection or table/the database'
     },
     {
@@ -189,10 +189,11 @@ const HomePage: FC = () => {
     },
     {
       title: 'Support of any data type',
-      image: '../../../../images/Image_Block1.svg',
+      image: '../../../../images/Image_Block.svg',
       content: 'Store, retrieve and work with images, video, audio in your database, and any type which can be encoded as bytes in Python.'
     },
   ];
+
   const { starCount, forksCount } = useGitHubRepoStats();
 
   return (
@@ -257,7 +258,10 @@ const HomePage: FC = () => {
             </div>
           </div>
         </div>
+
         <ImageAccordion listItems={listItems} />
+
+        <ImageAccordionCarousel listItems={listItems} />
 
         <section className="new-grants-parent">
           <div className="new-grants">
@@ -285,7 +289,6 @@ const HomePage: FC = () => {
             </div>
           </div>
         </section>
-
         <section className="frame-wrapper4">
           <div className="frame16">
             <img className="grid-icon1" alt="" src="../../../../images/Grid.svg" />
@@ -309,7 +312,6 @@ const HomePage: FC = () => {
         </section>
 
         <img className="underline-1-icon" alt="" src="../../../../images/underline.svg" />
-
         <section className="f-a-q-content-wrapper">
           <div className="f-a-q-content">
             <div className="f-a-q-background" />

@@ -183,9 +183,14 @@
    gap: var(--padding-13xl);
    color: var(--base-white);
 
+   @media(max-width:1000px) {
+      display: none;
+   }
+
    & .left-side {
       min-height: 500px;
       width: 70%;
+      align-self: center;
 
       & img {
          width: 100%;
@@ -205,11 +210,90 @@
          width: 100%;
          cursor: pointer;
          font-weight: 900;
+         position: relative;
 
          & p {
             font-size: var(--font-size-xs);
             font-weight: 300;
          }
+      }
+   }
+}
+
+.toolkit-container {
+   max-width: 1240px;
+   margin: auto;
+   padding: var(--padding-61xl) var(--padding-13xl);
+   display: none;
+
+   @media(max-width:1000px) {
+      display: block;
+   }
+
+   & .slick-prev {
+      display: none !important;
+   }
+
+   & .slick-next {
+      display: none !important;
+   }
+
+
+   .toolkit-slider {
+      margin: auto;
+      flex-direction: column;
+      max-width: 1240px;
+      gap: var(--gap-13xl);
+      color: var(--base-white);
+      display: flex !important;
+
+
+      & .toolkit-text {
+         padding-inline: var(--padding-13xl);
+         min-height: 120px;
+
+         & h4 {
+            margin: 0;
+            font-size: var(--desktop-mono-paragraph-xlarge-size);
+         }
+      }
+
+      & .toolkit-image {
+         width: 100%;
+
+         & img {
+            width: 100%;
+         }
+      }
+
+
+   }
+
+   & .control-btn {
+      padding-top: var(--padding-13xl);
+      display: flex;
+      gap: var(--gap-13xl);
+      justify-content: center;
+      align-items: center;
+      color: var(--base-white);
+
+      & .silder-button {
+         background-color: var(--base-white);
+         border-radius: 100%;
+         padding: var(--padding-xs);
+
+         & img {
+            vertical-align: bottom;
+         }
+      }
+
+      & .slide-number {
+         color: var(--color-dimgray);
+         font-size: large;
+      }
+
+      & .prev-btn {
+         rotate: 180deg;
       }
    }
 }
