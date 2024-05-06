@@ -175,7 +175,7 @@ const HomePage: FC = () => {
               </div>
               <div className='database-head'>
                 SuperDuperDB
-                <img className="sparkle-1" alt="" src="../../../../images/sparkle.svg" />
+                <img className="sparkle-1" alt="" src="../../../../images/Sparkle.svg" />
                 <br />
                 is not a database
               </div>
@@ -282,7 +282,7 @@ const HomePage: FC = () => {
               <div className="integrations-header">
                 <div className="integrations-heading">
                   <h1 className="heading2">AI Integrations</h1>
-                  <img className="sparkle-11" alt="" src="../../../../images/sparkle.svg" />
+                  <img className="sparkle-11" alt="" src="../../../../images/Sparkle.svg" />
                 </div>
                 <div className="integrations-docs">
                   <div className="docs-link1">

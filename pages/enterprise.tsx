@@ -311,7 +311,7 @@ const HomePage: FC = () => {
           </div>
         </section>
 
-        <img className="underline-1-icon" alt="" src="../../../../images/underline.svg" />
+        <img className="underline-1-icon" alt="" src="../../../../images/Underline.svg" />
         <section className="f-a-q-content-wrapper">
           <div className="f-a-q-content">
             <div className="f-a-q-background" />
